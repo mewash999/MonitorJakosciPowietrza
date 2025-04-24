@@ -31,7 +31,7 @@ Skonfiguruj ustawienia kompilacji (qmake) i uruchom budowę programu.<br>
 ## Pliki źródłowe:
 
 `mainwindow.cpp, mainwindow.h`: Główna klasa okna aplikacji, obsługa interfejsu i logiki.<br>
-`connectionmanager.cpp, connectionmanager.h`: Sprawdzanie połączenia internetowego i przełączanie między trybem online/offline.<br>
+`connectionmanager.cpp, connectionmanager.h`: Sprawdzanie połączenia i przełączanie między trybem online/offline.<br>
 `apiclient.cpp, apiclient.h`: Komunikacja z API GIOS.<br>
 `apiworker.cpp, apiworker.h`: Obsługa osobnego wątku dla zapytań sieciowych.<br>
 `stationhandler.cpp, stationhandler.h`: Obsługa danych stacji (wypełnianie listy, sortowanie, wyszukiwanie).<br>
