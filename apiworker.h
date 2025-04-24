@@ -4,9 +4,7 @@
 #include <QObject>
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-#include <QUrl>
-#include <QString>
-#include <QDebug>
+#include <QMap>
 #include <QThread>
 
 class ApiWorker : public QObject
@@ -16,10 +14,10 @@ class ApiWorker : public QObject
 public:
     explicit ApiWorker(QObject *parent = nullptr);
     ~ApiWorker();
-    void init();
 
 public slots:
-    void processRequest(const QUrl &url, int requestId = -1);
+    void processRequest(const QUrl &url, int requestId);
+    void init();
 
 signals:
     void resultReady(const QString &result, int requestId);
@@ -30,7 +28,7 @@ private slots:
     void onReplyFinished(QNetworkReply *reply);
 
 private:
-    QNetworkAccessManager *manager = nullptr;
+    QNetworkAccessManager *manager;
     QMap<QNetworkReply*, int> replyToRequestId;
 };
 

@@ -1,4 +1,5 @@
 #include "apiclient.h"
+#include "apiworker.h"
 
 ApiClient::ApiClient(QObject *parent)
     : QObject(parent), nextRequestId(0)
@@ -22,7 +23,7 @@ ApiClient::~ApiClient()
     workerThread.wait();
 }
 
-void ApiClient::fetchData(const QUrl& url)
+void ApiClient::fetchData(const QUrl &url)
 {
     int requestId = nextRequestId++;
     emit requestApiData(url, requestId);
@@ -32,14 +33,12 @@ void ApiClient::fetchSensorData(int sensorId)
 {
     QUrl url(QString("https://api.gios.gov.pl/pjp-api/rest/data/getData/%1").arg(sensorId));
     int requestId = nextRequestId++;
-    requestTypes[requestId] = "sensorData";
     emit requestApiData(url, requestId);
 }
 
 void ApiClient::handleResults(const QString &result, int requestId)
 {
     emit dataReady(result);
-
     requestTypes.remove(requestId);
     qDebug() << "handleResults — thread:" << QThread::currentThreadId();
 }
