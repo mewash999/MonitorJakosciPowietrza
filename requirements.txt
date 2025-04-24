@@ -1,4 +1,7 @@
-qt-core>=5.15.2
-qt-charts>=5.15
+# Wymagania
+## Framework Qt
+qt-core>=5.15
+qt-charts>=5.15 
 qt-network>=5.15
 cmake>=3.16
+msvc>=2017
