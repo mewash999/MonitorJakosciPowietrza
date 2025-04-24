@@ -10,7 +10,7 @@ MJP to aplikacja desktopowa stworzona w Qt (C++) do monitorowania jakości powie
 * Prezentacja aktualnych i historycznych danych pomiarowych zwizualizowanych w formie wykresu.<br>
 * Prosta analiza danych oraz wskazanie aktualnego trendu danych.<br>
 * Możliwość przeglądania danych zapisanych lokalnie w przypadku (braku) połączenia z internetem.<br>
-* Pełna obsługa programu myszką i/lub klawiszami Tab/Enter/strzałkami do wyboru stacji/czujników oraz nawigacji po przyciskach.<br>
+* Pełna obsługa programu myszką i/lub klawiszami Tab/Enter/strzałkami do nawigacji po listach i przyciskach.<br>
 
 ## Wymagania
 
