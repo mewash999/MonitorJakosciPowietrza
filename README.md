@@ -1,4 +1,4 @@
-##**MONITOR JAKOŚCI POWIETRZA**
+## **MONITOR JAKOŚCI POWIETRZA**
 System operacyjny: Windows 10/11,
 Środowisko Qt: 
   - Qt 6.8.2,
