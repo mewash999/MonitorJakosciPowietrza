@@ -4,4 +4,4 @@ System operacyjny: Windows 10/11,
   - Wersja: `Qt 6.8.2`,
   - Moduły: `QtCore`, `QtWidgets`, `QtCharts`, `QtNetwork`, `QtGui`,
   - Kompilacja: `qmake && make`
-### All rights reserved
+### All rights reserved!
