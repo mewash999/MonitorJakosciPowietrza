@@ -5,11 +5,10 @@ ApiWorker::ApiWorker(QObject *parent) : QObject(parent)
     qDebug() << "ApiWorker constructor - thread:" << QThread::currentThreadId();
 }
 
-ApiWorker::~ApiWorker(){}
+ApiWorker::~ApiWorker() {}
 
 void ApiWorker::processRequest(const QUrl &url, int requestId)
 {
-    //QThread::sleep(4);
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::UserAgentHeader, "MJP");
 

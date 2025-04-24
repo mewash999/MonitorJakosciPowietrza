@@ -38,7 +38,7 @@
       <x>4</x>
       <y>16</y>
       <width>792</width>
-      <height>386</height>
+      <height>387</height>
      </rect>
     </property>
     <property name="font">
@@ -60,7 +60,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>438</y>
+      <y>437</y>
       <width>422</width>
       <height>141</height>
      </rect>
@@ -75,8 +75,8 @@
    <widget class="QListWidget" name="sensorList">
     <property name="geometry">
      <rect>
-      <x>446</x>
-      <y>438</y>
+      <x>444</x>
+      <y>437</y>
       <width>181</width>
       <height>141</height>
      </rect>
@@ -92,7 +92,7 @@
     <property name="geometry">
      <rect>
       <x>647</x>
-      <y>7</y>
+      <y>8</y>
       <width>141</width>
       <height>20</height>
      </rect>
@@ -113,8 +113,8 @@
    <widget class="QLabel" name="label2">
     <property name="geometry">
      <rect>
-      <x>449</x>
-      <y>416</y>
+      <x>447</x>
+      <y>415</y>
       <width>175</width>
       <height>21</height>
      </rect>
@@ -141,8 +141,8 @@
    <widget class="QLabel" name="lblStationCount">
     <property name="geometry">
      <rect>
-      <x>14</x>
-      <y>581</y>
+      <x>15</x>
+      <y>580</y>
       <width>141</width>
       <height>16</height>
      </rect>
@@ -164,7 +164,7 @@
     <property name="geometry">
      <rect>
       <x>10</x>
-      <y>401</y>
+      <y>400</y>
       <width>166</width>
       <height>31</height>
      </rect>
@@ -197,9 +197,9 @@
    <widget class="QLabel" name="lblStats">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>409</y>
-      <width>151</width>
+      <x>636</x>
+      <y>408</y>
+      <width>155</width>
       <height>81</height>
      </rect>
     </property>
@@ -238,9 +238,9 @@
    <widget class="QPushButton" name="btnHistory">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>556</y>
-      <width>151</width>
+      <x>636</x>
+      <y>555</y>
+      <width>155</width>
       <height>24</height>
      </rect>
     </property>
@@ -262,9 +262,9 @@
    <widget class="QPushButton" name="btnLast14Days">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>527</y>
-      <width>151</width>
+      <x>636</x>
+      <y>526</y>
+      <width>155</width>
       <height>24</height>
      </rect>
     </property>
@@ -281,9 +281,9 @@
    <widget class="QPushButton" name="btnLast7Days">
     <property name="geometry">
      <rect>
-      <x>640</x>
-      <y>498</y>
-      <width>151</width>
+      <x>636</x>
+      <y>497</y>
+      <width>155</width>
       <height>24</height>
      </rect>
     </property>
@@ -301,7 +301,7 @@
     <property name="geometry">
      <rect>
       <x>2</x>
-      <y>6</y>
+      <y>7</y>
       <width>271</width>
       <height>21</height>
      </rect>
