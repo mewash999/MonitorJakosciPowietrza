@@ -1,3 +1,8 @@
+/**
+ * @file sensorhandler.h
+ * @brief Definicja klasy SensorHandler do obsługi danych czujników.
+ */
+
 #ifndef SENSORHANDLER_H
 #define SENSORHANDLER_H
 

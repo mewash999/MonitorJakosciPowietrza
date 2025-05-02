@@ -1,3 +1,8 @@
+/**
+ * @file sensorhandler.cpp
+ * @brief Implementacja klasy SensorHandler do obsługi danych czujników.
+ */
+
 #include "sensorhandler.h"
 
 /**

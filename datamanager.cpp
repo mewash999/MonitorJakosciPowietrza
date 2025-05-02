@@ -1,3 +1,8 @@
+/**
+ * @file datamanager.cpp
+ * @brief Implementacja klasy DataManager do zarządzania danymi aplikacji.
+ */
+
 #include "datamanager.h"
 
 /**

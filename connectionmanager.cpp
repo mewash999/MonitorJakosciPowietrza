@@ -1,3 +1,8 @@
+/**
+ * @file connectionmanager.cpp
+ * @brief Implementacja klasy ConnectionManager do zarządzania połączeniami sieciowymi.
+ */
+
 #include "connectionmanager.h"
 #include "apiclient.h"
 #include "datamanager.h"

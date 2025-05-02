@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Dokumentacja klasy ConnectionManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_connection_manager.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy ConnectionManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="connectionmanager_8h_source.html">connectionmanager.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla ConnectionManager</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_connection_manager.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a7df957aac612e4c16dae04befa333a71" id="r_a7df957aac612e4c16dae04befa333a71"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7df957aac612e4c16dae04befa333a71">ConnectionManager</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a7df957aac612e4c16dae04befa333a71"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_connection_manager.html">ConnectionManager</a>.  <br /></td></tr>
+<tr class="separator:a7df957aac612e4c16dae04befa333a71"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dd32ffcf7366683782197ccce312b28" id="r_a4dd32ffcf7366683782197ccce312b28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4dd32ffcf7366683782197ccce312b28">checkConnectionAndReloadStations</a> (<a class="el" href="class_api_client.html">ApiClient</a> *apiClient, QListWidget *stationList, QLabel *lblStatus, QLabel *lblStationCount, bool &amp;isOffline, QVector&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</td></tr>
+<tr class="memdesc:a4dd32ffcf7366683782197ccce312b28"><td class="mdescLeft">&#160;</td><td class="mdescRight">Sprawdza połączenie internetowe i ładuje dane stacji.  <br /></td></tr>
+<tr class="separator:a4dd32ffcf7366683782197ccce312b28"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="connectionmanager_8h_source.html#l00019">19</a> pliku <a class="el" href="connectionmanager_8h_source.html">connectionmanager.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a7df957aac612e4c16dae04befa333a71" name="a7df957aac612e4c16dae04befa333a71"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7df957aac612e4c16dae04befa333a71">&#9670;&#160;</a></span>ConnectionManager()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ConnectionManager::ConnectionManager </td>
+          <td>(</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy <a class="el" href="class_connection_manager.html">ConnectionManager</a>. </p>
+<p>Inicjalizuje obiekt klasy <a class="el" href="class_connection_manager.html">ConnectionManager</a>, ustawiając obiekt nadrzędny (QObject).</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt nadrzędny (QObject), domyślnie nullptr.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Inicjalizuje obiekt klasy <a class="el" href="class_connection_manager.html">ConnectionManager</a>, ustawiając obiekt nadrzędny (QObject). Klasa ta odpowiada za zarządzanie połączeniem sieciowym i ładowanie danych stacji.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt nadrzędny (QObject), domyślnie nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="connectionmanager_8cpp_source.html#l00019">19</a> pliku <a class="el" href="connectionmanager_8cpp_source.html">connectionmanager.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a4dd32ffcf7366683782197ccce312b28" name="a4dd32ffcf7366683782197ccce312b28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dd32ffcf7366683782197ccce312b28">&#9670;&#160;</a></span>checkConnectionAndReloadStations()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ConnectionManager::checkConnectionAndReloadStations </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_api_client.html">ApiClient</a> *</td>          <td class="paramname"><span class="paramname"><em>apiClient</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QListWidget *</td>          <td class="paramname"><span class="paramname"><em>stationList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QLabel *</td>          <td class="paramname"><span class="paramname"><em>lblStatus</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QLabel *</td>          <td class="paramname"><span class="paramname"><em>lblStationCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool &amp;</td>          <td class="paramname"><span class="paramname"><em>isOffline</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QVector&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>allStations</em></span>&#160;)</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Sprawdza połączenie internetowe i ładuje dane stacji. </p>
+<p>Sprawdza dostępność połączenia internetowego i w zależności od wyniku ładuje dane stacji z API (jeśli online) lub z lokalnego pliku (jeśli offline). Aktualizuje status połączenia i listę stacji w interfejsie użytkownika.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apiClient</td><td>Wskaźnik na obiekt <a class="el" href="class_api_client.html">ApiClient</a> do wysyłania żądań API. </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na QListWidget, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStatus</td><td>Wskaźnik na QLabel wyświetlający status połączenia. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na QLabel wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">isOffline</td><td>Referencja do flagi wskazującej, czy aplikacja działa w trybie offline. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Referencja do wektora przechowującego dane wszystkich stacji (nazwa i obiekt JSON).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Wykonuje żądanie sieciowe do adresu URL (<a href="http://www.google.com">http://www.google.com</a>) w celu sprawdzenia dostępności połączenia internetowego. W zależności od wyniku:</p><ul>
+<li>Jeśli połączenie jest dostępne (<code>NoError</code>), ustawia status na "Połączono", zmienia kolor etykiety na zielony i, jeśli lista stacji jest pusta, wysyła żądanie do API w celu pobrania danych wszystkich stacji.</li>
+<li>Jeśli brak połączenia, ustawia status na "Brak połączenia - wczytano dane lokalne", zmienia kolor etykiety na czerwony i, jeśli lista stacji jest pusta, próbuje wczytać dane stacji z lokalnego pliku JSON. Po zakończeniu operacji zwalnia zasoby (<code>rep</code> i <code>mgr</code>).</li>
+</ul>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">apiClient</td><td>Wskaźnik na obiekt <a class="el" href="class_api_client.html">ApiClient</a> do wysyłania żądań API. </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na QListWidget, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStatus</td><td>Wskaźnik na QLabel wyświetlający status połączenia. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na QLabel wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">isOffline</td><td>Referencja do flagi wskazującej, czy aplikacja działa w trybie offline. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Referencja do wektora przechowującego dane wszystkich stacji (nazwa i obiekt JSON). </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="connectionmanager_8cpp_source.html#l00039">39</a> pliku <a class="el" href="connectionmanager_8cpp_source.html">connectionmanager.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="connectionmanager_8h_source.html">connectionmanager.h</a></li>
+<li><a class="el" href="connectionmanager_8cpp_source.html">connectionmanager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_connection_manager.html">ConnectionManager</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

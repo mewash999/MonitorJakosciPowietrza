@@ -10,11 +10,6 @@
  #include <QThread>
  #include "apiworker.h"
  
- /**
-  * @class ApiClient
-  * @brief Klasa do zarządzania żądaniami API w oddzielnym wątku.
-  * @details Klasa koordynuje żądania sieciowe, delegując je do obiektu ApiWorker działającego w oddzielnym wątku. Zapewnia asynchroniczne pobieranie danych z API, emitując sygnały dataReady po otrzymaniu danych lub errorOccurred w przypadku błędu. Klasa zarządza cyklem życia wątku i obiektu ApiWorker, zapewniając bezpieczne zwalnianie zasobów.
-  */
  class ApiClient : public QObject {
      Q_OBJECT
  public:

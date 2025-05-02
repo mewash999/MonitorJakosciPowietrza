@@ -1,3 +1,8 @@
+/**
+* @file mainwindow.cpp
+* @brief Implementacja klasy MainWindow dla głównego okna aplikacji.
+*/
+
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "apiclient.h"

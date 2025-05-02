@@ -1,3 +1,8 @@
+/**
+ * @file connectionmanager.h
+ * @brief Definicja klasy ConnectionManager do zarządzania połączeniami sieciowymi.
+ */
+
 #ifndef CONNECTIONMANAGER_H
 #define CONNECTIONMANAGER_H
 

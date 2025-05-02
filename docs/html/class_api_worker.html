@@ -1,0 +1,456 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Dokumentacja klasy ApiWorker</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_api_worker.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-slots">Sloty publiczne</a> &#124;
+<a href="#signals">Sygnały</a> &#124;
+<a href="#pub-methods">Metody publiczne</a> &#124;
+<a href="#pri-slots">Sloty prywatne</a> &#124;
+<a href="#pri-attribs">Atrybuty prywatne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy ApiWorker</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="apiworker_8h_source.html">apiworker.h</a>&gt;</code></p>
+<div class="dynheader">
+Diagram dziedziczenia dla ApiWorker</div>
+<div class="dyncontent">
+ <div class="center">
+  <img src="class_api_worker.png" alt=""/>
+ </div></div>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-slots" name="pub-slots"></a>
+Sloty publiczne</h2></td></tr>
+<tr class="memitem:ac387ca7d37588a6355e5a538bcb72175" id="r_ac387ca7d37588a6355e5a538bcb72175"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac387ca7d37588a6355e5a538bcb72175">processRequest</a> (const QUrl &amp;url, int requestId)</td></tr>
+<tr class="memdesc:ac387ca7d37588a6355e5a538bcb72175"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przetwarza żądanie sieciowe dla podanego adresu URL.  <br /></td></tr>
+<tr class="separator:ac387ca7d37588a6355e5a538bcb72175"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7f0b8aa6e534123b393154cfcfd446c6" id="r_a7f0b8aa6e534123b393154cfcfd446c6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a7f0b8aa6e534123b393154cfcfd446c6">init</a> ()</td></tr>
+<tr class="memdesc:a7f0b8aa6e534123b393154cfcfd446c6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inicjalizuje obiekt <a class="el" href="class_api_worker.html">ApiWorker</a>.  <br /></td></tr>
+<tr class="separator:a7f0b8aa6e534123b393154cfcfd446c6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="signals" name="signals"></a>
+Sygnały</h2></td></tr>
+<tr class="memitem:a35b94e367b8e01f4c2b62504a53b18ac" id="r_a35b94e367b8e01f4c2b62504a53b18ac"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a35b94e367b8e01f4c2b62504a53b18ac">resultReady</a> (const QString &amp;result, int requestId)</td></tr>
+<tr class="separator:a35b94e367b8e01f4c2b62504a53b18ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ea6ba12ab0b82e1e8485add05def6e4" id="r_a2ea6ba12ab0b82e1e8485add05def6e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2ea6ba12ab0b82e1e8485add05def6e4">errorOccurred</a> (const QString &amp;error, int requestId)</td></tr>
+<tr class="separator:a2ea6ba12ab0b82e1e8485add05def6e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2e95d6d6a58ae4265e169cd9b1b3663c" id="r_a2e95d6d6a58ae4265e169cd9b1b3663c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2e95d6d6a58ae4265e169cd9b1b3663c">finished</a> ()</td></tr>
+<tr class="separator:a2e95d6d6a58ae4265e169cd9b1b3663c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:a02e221dcc10d69071adb69749e3e5ae6" id="r_a02e221dcc10d69071adb69749e3e5ae6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a02e221dcc10d69071adb69749e3e5ae6">ApiWorker</a> (QObject *parent=nullptr)</td></tr>
+<tr class="memdesc:a02e221dcc10d69071adb69749e3e5ae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="class_api_worker.html">ApiWorker</a>.  <br /></td></tr>
+<tr class="separator:a02e221dcc10d69071adb69749e3e5ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af22b27b476a7d24319ba5befd5b67aa6" id="r_af22b27b476a7d24319ba5befd5b67aa6"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af22b27b476a7d24319ba5befd5b67aa6">~ApiWorker</a> ()</td></tr>
+<tr class="memdesc:af22b27b476a7d24319ba5befd5b67aa6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Destruktor klasy <a class="el" href="class_api_worker.html">ApiWorker</a>.  <br /></td></tr>
+<tr class="separator:af22b27b476a7d24319ba5befd5b67aa6"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-slots" name="pri-slots"></a>
+Sloty prywatne</h2></td></tr>
+<tr class="memitem:a42abd0b4c00c9a7a9056805faf592a65" id="r_a42abd0b4c00c9a7a9056805faf592a65"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a42abd0b4c00c9a7a9056805faf592a65">onReplyFinished</a> (QNetworkReply *reply)</td></tr>
+<tr class="memdesc:a42abd0b4c00c9a7a9056805faf592a65"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsługuje zakończenie odpowiedzi sieciowej.  <br /></td></tr>
+<tr class="separator:a42abd0b4c00c9a7a9056805faf592a65"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pri-attribs" name="pri-attribs"></a>
+Atrybuty prywatne</h2></td></tr>
+<tr class="memitem:ad56a07e518aeba6a7f456aa3648332c8" id="r_ad56a07e518aeba6a7f456aa3648332c8"><td class="memItemLeft" align="right" valign="top">QNetworkAccessManager *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ad56a07e518aeba6a7f456aa3648332c8">manager</a></td></tr>
+<tr class="separator:ad56a07e518aeba6a7f456aa3648332c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af89cf8c1ff4595d6b62f7ad9d26fd4e8" id="r_af89cf8c1ff4595d6b62f7ad9d26fd4e8"><td class="memItemLeft" align="right" valign="top">QMap&lt; QNetworkReply *, int &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a></td></tr>
+<tr class="separator:af89cf8c1ff4595d6b62f7ad9d26fd4e8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8h_source.html#l00015">15</a> pliku <a class="el" href="apiworker_8h_source.html">apiworker.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja konstruktora i destruktora</h2>
+<a id="a02e221dcc10d69071adb69749e3e5ae6" name="a02e221dcc10d69071adb69749e3e5ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a02e221dcc10d69071adb69749e3e5ae6">&#9670;&#160;</a></span>ApiWorker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">ApiWorker::ApiWorker </td>
+          <td>(</td>
+          <td class="paramtype">QObject *</td>          <td class="paramname"><span class="paramname"><em>parent</em></span><span class="paramdefsep"> = </span><span class="paramdefval">nullptr</span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel explicit">explicit</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Konstruktor klasy <a class="el" href="class_api_worker.html">ApiWorker</a>. </p>
+<p>Inicjalizuje obiekt klasy <a class="el" href="class_api_worker.html">ApiWorker</a>, który obsługuje asynchroniczne żądania sieciowe.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt nadrzędny (QObject), domyślnie nullptr.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Inicjalizuje obiekt klasy <a class="el" href="class_api_worker.html">ApiWorker</a>, wypisując informację debugującą z identyfikatorem bieżącego wątku. Klasa odpowiada za asynchroniczne przetwarzanie żądań sieciowych.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">parent</td><td>Wskaźnik na obiekt nadrzędny (QObject), domyślnie nullptr. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8cpp_source.html#l00016">16</a> pliku <a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a>.</p>
+
+</div>
+</div>
+<a id="af22b27b476a7d24319ba5befd5b67aa6" name="af22b27b476a7d24319ba5befd5b67aa6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af22b27b476a7d24319ba5befd5b67aa6">&#9670;&#160;</a></span>~ApiWorker()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ApiWorker::~ApiWorker </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Destruktor klasy <a class="el" href="class_api_worker.html">ApiWorker</a>. </p>
+<p>Zwalnia zasoby związane z obiektem <a class="el" href="class_api_worker.html">ApiWorker</a>. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8cpp_source.html#l00026">26</a> pliku <a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="a2ea6ba12ab0b82e1e8485add05def6e4" name="a2ea6ba12ab0b82e1e8485add05def6e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ea6ba12ab0b82e1e8485add05def6e4">&#9670;&#160;</a></span>errorOccurred</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::errorOccurred </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>error</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>requestId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a2e95d6d6a58ae4265e169cd9b1b3663c" name="a2e95d6d6a58ae4265e169cd9b1b3663c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2e95d6d6a58ae4265e169cd9b1b3663c">&#9670;&#160;</a></span>finished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::finished </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a7f0b8aa6e534123b393154cfcfd446c6" name="a7f0b8aa6e534123b393154cfcfd446c6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7f0b8aa6e534123b393154cfcfd446c6">&#9670;&#160;</a></span>init</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::init </td>
+          <td>(</td>
+          <td class="paramname"><span class="paramname"><em></em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Inicjalizuje obiekt <a class="el" href="class_api_worker.html">ApiWorker</a>. </p>
+<p>Tworzy QNetworkAccessManager i konfiguruje połączenia sygnałów dla obsługi odpowiedzi sieciowych.</p>
+<p>Tworzy nowy obiekt QNetworkAccessManager i łączy sygnał finished z slotem onReplyFinished, umożliwiając obsługę odpowiedzi sieciowych. Wypisuje informację debugującą z identyfikatorem bieżącego wątku. </p>
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8cpp_source.html#l00083">83</a> pliku <a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a42abd0b4c00c9a7a9056805faf592a65" name="a42abd0b4c00c9a7a9056805faf592a65"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a42abd0b4c00c9a7a9056805faf592a65">&#9670;&#160;</a></span>onReplyFinished</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::onReplyFinished </td>
+          <td>(</td>
+          <td class="paramtype">QNetworkReply *</td>          <td class="paramname"><span class="paramname"><em>reply</em></span></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Obsługuje zakończenie odpowiedzi sieciowej. </p>
+<p>Przetwarza odpowiedź sieciową, emitując sygnał resultReady lub errorOccurred w zależności od wyniku.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reply</td><td>Wskaźnik na obiekt QNetworkReply zawierający odpowiedź sieciową.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Sprawdza, czy odpowiedź nie zawiera błędu. Jeśli brak błędu, odczytuje dane, konwertuje je na QString i emituje sygnał resultReady. W przypadku błędu emituje sygnał errorOccurred z opisem błędu. Następnie usuwa odpowiedź i jej mapowanie oraz emituje sygnał finished, jeśli nie ma więcej oczekujących odpowiedzi.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">reply</td><td>Wskaźnik na obiekt QNetworkReply zawierający odpowiedź sieciową. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8cpp_source.html#l00056">56</a> pliku <a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a>.</p>
+
+</div>
+</div>
+<a id="ac387ca7d37588a6355e5a538bcb72175" name="ac387ca7d37588a6355e5a538bcb72175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac387ca7d37588a6355e5a538bcb72175">&#9670;&#160;</a></span>processRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::processRequest </td>
+          <td>(</td>
+          <td class="paramtype">const QUrl &amp;</td>          <td class="paramname"><span class="paramname"><em>url</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>requestId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel slot">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przetwarza żądanie sieciowe dla podanego adresu URL. </p>
+<p>Wysyła żądanie GET dla podanego adresu URL i przechowuje identyfikator żądania.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>Adres URL, z którego mają zostać pobrane dane. </td></tr>
+    <tr><td class="paramname">requestId</td><td>Identyfikator żądania.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Tworzy obiekt QNetworkRequest z podanym adresem URL, ustawia nagłówek User-Agent na "MJP" i wysyła żądanie GET za pomocą QNetworkAccessManager. Przechowuje mapowanie odpowiedzi na identyfikator żądania w replyToRequestId.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">url</td><td>Adres URL, z którego mają zostać pobrane dane. </td></tr>
+    <tr><td class="paramname">requestId</td><td>Identyfikator żądania. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8cpp_source.html#l00038">38</a> pliku <a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a35b94e367b8e01f4c2b62504a53b18ac" name="a35b94e367b8e01f4c2b62504a53b18ac"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a35b94e367b8e01f4c2b62504a53b18ac">&#9670;&#160;</a></span>resultReady</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ApiWorker::resultReady </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>result</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>requestId</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel signal">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<h2 class="groupheader">Dokumentacja pól</h2>
+<a id="ad56a07e518aeba6a7f456aa3648332c8" name="ad56a07e518aeba6a7f456aa3648332c8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad56a07e518aeba6a7f456aa3648332c8">&#9670;&#160;</a></span>manager</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QNetworkAccessManager* ApiWorker::manager</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8h_source.html#l00070">70</a> pliku <a class="el" href="apiworker_8h_source.html">apiworker.h</a>.</p>
+
+</div>
+</div>
+<a id="af89cf8c1ff4595d6b62f7ad9d26fd4e8" name="af89cf8c1ff4595d6b62f7ad9d26fd4e8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af89cf8c1ff4595d6b62f7ad9d26fd4e8">&#9670;&#160;</a></span>replyToRequestId</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QMap&lt;QNetworkReply*, int&gt; ApiWorker::replyToRequestId</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel private">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p class="definition">Definicja w linii <a class="el" href="apiworker_8h_source.html#l00071">71</a> pliku <a class="el" href="apiworker_8h_source.html">apiworker.h</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="apiworker_8h_source.html">apiworker.h</a></li>
+<li><a class="el" href="apiworker_8cpp_source.html">apiworker.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_api_worker.html">ApiWorker</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

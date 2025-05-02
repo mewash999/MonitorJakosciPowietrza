@@ -1,0 +1,125 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Plik źródłowy connectionmanager.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('connectionmanager_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">connectionmanager.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="connectionmanager_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="connectionmanager_8h.html">connectionmanager.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;<a class="code" href="apiclient_8h.html">apiclient.h</a>&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="datamanager_8h.html">datamanager.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="stationhandler_8h.html">stationhandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno"><a class="line" href="class_connection_manager.html#a7df957aac612e4c16dae04befa333a71">   19</a></span><a class="code hl_function" href="class_connection_manager.html#a7df957aac612e4c16dae04befa333a71">ConnectionManager::ConnectionManager</a>(QObject *parent) : QObject(parent) {}</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="foldopen" id="foldopen00039" data-start="{" data-end="}">
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno"><a class="line" href="class_connection_manager.html#a4dd32ffcf7366683782197ccce312b28">   39</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_connection_manager.html#a4dd32ffcf7366683782197ccce312b28">ConnectionManager::checkConnectionAndReloadStations</a>(<a class="code hl_class" href="class_api_client.html">ApiClient</a> *apiClient, QListWidget *stationList, QLabel *lblStatus, QLabel *lblStationCount, <span class="keywordtype">bool</span> &amp;isOffline, QVector&lt;QPair&lt;QString, QJsonObject&gt;&gt; &amp;allStations) {</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QNetworkAccessManager *mgr = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    QNetworkRequest req(QUrl(<span class="stringliteral">&quot;http://www.google.com&quot;</span>));</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    QNetworkReply *rep = mgr-&gt;get(req);</div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span> </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    connect(rep, &amp;QNetworkReply::finished, [apiClient, stationList, lblStatus, lblStationCount, &amp;isOffline, &amp;allStations, rep, mgr]() {</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>        <span class="keywordflow">if</span> (rep-&gt;error() == QNetworkReply::NoError) {</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>            isOffline = <span class="keyword">false</span>;</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>            lblStatus-&gt;setText(<span class="stringliteral">&quot;Połączono&quot;</span>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>            lblStatus-&gt;setStyleSheet(<span class="stringliteral">&quot;color: green;&quot;</span>);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>            <span class="keywordflow">if</span> (stationList-&gt;count() == 0) {</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>                apiClient-&gt;<a class="code hl_function" href="class_api_client.html#aff9fbad0d6d8ece1cbe02ce1e0ffc176">fetchData</a>(QUrl(<span class="stringliteral">&quot;https://api.gios.gov.pl/pjp-api/rest/station/findAll&quot;</span>));</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>            }</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>            isOffline = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>            lblStatus-&gt;setText(<span class="stringliteral">&quot;Brak połączenia - wczytano dane lokalne&quot;</span>);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>            lblStatus-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>            <span class="keywordflow">if</span> (stationList-&gt;count() == 0) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>                QByteArray stationsData = <a class="code hl_function" href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a>(<span class="stringliteral">&quot;stations&quot;</span>);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>                <span class="keywordflow">if</span> (!stationsData.isEmpty()) {</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>                    QJsonDocument doc = QJsonDocument::fromJson(stationsData);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>                    <span class="keywordflow">if</span> (doc.isArray()) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>                        QList&lt;QPair&lt;QString, QJsonObject&gt;&gt; allStations;</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>                        <a class="code hl_function" href="class_station_handler.html#ac3f14b21a8554f54a68b76cef4508e40">StationHandler::handleStationsData</a>(doc.array(), stationList, lblStationCount, allStations);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>                    }</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>                }</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>            }</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>        }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>        rep-&gt;deleteLater();</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>        mgr-&gt;deleteLater();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    });</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>}</div>
+</div>
+<div class="ttc" id="aapiclient_8h_html"><div class="ttname"><a href="apiclient_8h.html">apiclient.h</a></div><div class="ttdoc">Definicja klasy ApiClient do zarządzania żądaniami API.</div></div>
+<div class="ttc" id="aclass_api_client_html"><div class="ttname"><a href="class_api_client.html">ApiClient</a></div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8h_source.html#l00013">apiclient.h:13</a></div></div>
+<div class="ttc" id="aclass_api_client_html_aff9fbad0d6d8ece1cbe02ce1e0ffc176"><div class="ttname"><a href="class_api_client.html#aff9fbad0d6d8ece1cbe02ce1e0ffc176">ApiClient::fetchData</a></div><div class="ttdeci">void fetchData(const QUrl &amp;url)</div><div class="ttdoc">Inicjuje żądanie sieciowe dla podanego adresu URL.</div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8cpp_source.html#l00056">apiclient.cpp:56</a></div></div>
+<div class="ttc" id="aclass_connection_manager_html_a4dd32ffcf7366683782197ccce312b28"><div class="ttname"><a href="class_connection_manager.html#a4dd32ffcf7366683782197ccce312b28">ConnectionManager::checkConnectionAndReloadStations</a></div><div class="ttdeci">void checkConnectionAndReloadStations(ApiClient *apiClient, QListWidget *stationList, QLabel *lblStatus, QLabel *lblStationCount, bool &amp;isOffline, QVector&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</div><div class="ttdoc">Sprawdza połączenie internetowe i ładuje dane stacji.</div><div class="ttdef"><b>Definicja</b> <a href="#l00039">connectionmanager.cpp:39</a></div></div>
+<div class="ttc" id="aclass_connection_manager_html_a7df957aac612e4c16dae04befa333a71"><div class="ttname"><a href="class_connection_manager.html#a7df957aac612e4c16dae04befa333a71">ConnectionManager::ConnectionManager</a></div><div class="ttdeci">ConnectionManager(QObject *parent=nullptr)</div><div class="ttdoc">Konstruktor klasy ConnectionManager.</div><div class="ttdef"><b>Definicja</b> <a href="#l00019">connectionmanager.cpp:19</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_abc87b1ff10d7c63ad9a7c3c952140de7"><div class="ttname"><a href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a></div><div class="ttdeci">static QByteArray loadDataFromFile(const QString &amp;baseFileName, int id=-1)</div><div class="ttdoc">Wczytuje dane z pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00061">datamanager.cpp:61</a></div></div>
+<div class="ttc" id="aclass_station_handler_html_ac3f14b21a8554f54a68b76cef4508e40"><div class="ttname"><a href="class_station_handler.html#ac3f14b21a8554f54a68b76cef4508e40">StationHandler::handleStationsData</a></div><div class="ttdeci">static void handleStationsData(const QJsonArray &amp;array, QListWidget *stationList, QLabel *lblStationCount, QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</div><div class="ttdoc">Przetwarza dane stacji z tablicy JSON i aktualizuje listę stacji.</div><div class="ttdef"><b>Definicja</b> <a href="stationhandler_8cpp_source.html#l00023">stationhandler.cpp:23</a></div></div>
+<div class="ttc" id="aconnectionmanager_8h_html"><div class="ttname"><a href="connectionmanager_8h.html">connectionmanager.h</a></div><div class="ttdoc">Definicja klasy ConnectionManager do zarządzania połączeniami sieciowymi.</div></div>
+<div class="ttc" id="adatamanager_8h_html"><div class="ttname"><a href="datamanager_8h.html">datamanager.h</a></div><div class="ttdoc">Definicja klasy DataManager do zarządzania danymi aplikacji.</div></div>
+<div class="ttc" id="astationhandler_8h_html"><div class="ttname"><a href="stationhandler_8h.html">stationhandler.h</a></div><div class="ttdoc">Definicja klasy StationHandler do obsługi danych stacji.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="connectionmanager_8cpp.html">connectionmanager.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

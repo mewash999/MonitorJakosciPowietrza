@@ -1,3 +1,8 @@
+/**
+ * @file datamanager.h
+ * @brief Definicja klasy DataManager do zarządzania danymi aplikacji.
+ */
+
 #ifndef DATAMANAGER_H
 #define DATAMANAGER_H
 

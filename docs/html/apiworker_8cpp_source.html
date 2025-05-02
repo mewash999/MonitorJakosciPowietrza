@@ -1,0 +1,137 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Plik źródłowy apiworker.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">apiworker.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="apiworker_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="apiworker_8h.html">apiworker.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span></div>
+<div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_api_worker.html#a02e221dcc10d69071adb69749e3e5ae6">   16</a></span><a class="code hl_function" href="class_api_worker.html#a02e221dcc10d69071adb69749e3e5ae6">ApiWorker::ApiWorker</a>(QObject *parent) : QObject(parent)</div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;ApiWorker constructor - thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
+</div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_api_worker.html#af22b27b476a7d24319ba5befd5b67aa6">   26</a></span><a class="code hl_function" href="class_api_worker.html#af22b27b476a7d24319ba5befd5b67aa6">ApiWorker::~ApiWorker</a>() {}</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span></div>
+<div class="foldopen" id="foldopen00038" data-start="{" data-end="}">
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno"><a class="line" href="class_api_worker.html#ac387ca7d37588a6355e5a538bcb72175">   38</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_api_worker.html#ac387ca7d37588a6355e5a538bcb72175">ApiWorker::processRequest</a>(<span class="keyword">const</span> QUrl &amp;url, <span class="keywordtype">int</span> requestId)</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span>{</div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    QNetworkRequest request(url);</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    request.setHeader(QNetworkRequest::UserAgentHeader, <span class="stringliteral">&quot;MJP&quot;</span>);</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    QNetworkReply *reply = <a class="code hl_variable" href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">manager</a>-&gt;get(request);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <a class="code hl_variable" href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a>[reply] = requestId;</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span>}</div>
+</div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span></div>
+<div class="foldopen" id="foldopen00056" data-start="{" data-end="}">
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno"><a class="line" href="class_api_worker.html#a42abd0b4c00c9a7a9056805faf592a65">   56</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_api_worker.html#a42abd0b4c00c9a7a9056805faf592a65">ApiWorker::onReplyFinished</a>(QNetworkReply *reply)</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>{</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keywordtype">int</span> requestId = <a class="code hl_variable" href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a>.value(reply, -1);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span> </div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    <span class="keywordflow">if</span> (reply-&gt;error() == QNetworkReply::NoError) {</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>        QByteArray bytes = reply-&gt;readAll();</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>        QString response = QString::fromUtf8(bytes);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>        emit <a class="code hl_signal" href="class_api_worker.html#a35b94e367b8e01f4c2b62504a53b18ac">resultReady</a>(response, requestId);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>        emit <a class="code hl_signal" href="class_api_worker.html#a2ea6ba12ab0b82e1e8485add05def6e4">errorOccurred</a>(reply-&gt;errorString(), requestId);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    }</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    reply-&gt;deleteLater();</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a>.remove(reply);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a>.isEmpty()) {</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        emit <a class="code hl_signal" href="class_api_worker.html#a2e95d6d6a58ae4265e169cd9b1b3663c">finished</a>();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;onReplyFinished — thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
+</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
+<div class="foldopen" id="foldopen00083" data-start="{" data-end="}">
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_api_worker.html#a7f0b8aa6e534123b393154cfcfd446c6">   83</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_api_worker.html#a7f0b8aa6e534123b393154cfcfd446c6">ApiWorker::init</a>() {</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_variable" href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">manager</a> = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    connect(<a class="code hl_variable" href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">manager</a>, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_api_worker.html#a42abd0b4c00c9a7a9056805faf592a65">ApiWorker::onReplyFinished</a>);</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;ApiWorker::init() — thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
+<div class="ttc" id="aapiworker_8h_html"><div class="ttname"><a href="apiworker_8h.html">apiworker.h</a></div><div class="ttdoc">Definicja klasy ApiWorker do wykonywania żądań sieciowych w oddzielnym wątku.</div></div>
+<div class="ttc" id="aclass_api_worker_html_a02e221dcc10d69071adb69749e3e5ae6"><div class="ttname"><a href="class_api_worker.html#a02e221dcc10d69071adb69749e3e5ae6">ApiWorker::ApiWorker</a></div><div class="ttdeci">ApiWorker(QObject *parent=nullptr)</div><div class="ttdoc">Konstruktor klasy ApiWorker.</div><div class="ttdef"><b>Definicja</b> <a href="#l00016">apiworker.cpp:16</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_a2e95d6d6a58ae4265e169cd9b1b3663c"><div class="ttname"><a href="class_api_worker.html#a2e95d6d6a58ae4265e169cd9b1b3663c">ApiWorker::finished</a></div><div class="ttdeci">void finished()</div></div>
+<div class="ttc" id="aclass_api_worker_html_a2ea6ba12ab0b82e1e8485add05def6e4"><div class="ttname"><a href="class_api_worker.html#a2ea6ba12ab0b82e1e8485add05def6e4">ApiWorker::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;error, int requestId)</div></div>
+<div class="ttc" id="aclass_api_worker_html_a35b94e367b8e01f4c2b62504a53b18ac"><div class="ttname"><a href="class_api_worker.html#a35b94e367b8e01f4c2b62504a53b18ac">ApiWorker::resultReady</a></div><div class="ttdeci">void resultReady(const QString &amp;result, int requestId)</div></div>
+<div class="ttc" id="aclass_api_worker_html_a42abd0b4c00c9a7a9056805faf592a65"><div class="ttname"><a href="class_api_worker.html#a42abd0b4c00c9a7a9056805faf592a65">ApiWorker::onReplyFinished</a></div><div class="ttdeci">void onReplyFinished(QNetworkReply *reply)</div><div class="ttdoc">Obsługuje zakończenie odpowiedzi sieciowej.</div><div class="ttdef"><b>Definicja</b> <a href="#l00056">apiworker.cpp:56</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_a7f0b8aa6e534123b393154cfcfd446c6"><div class="ttname"><a href="class_api_worker.html#a7f0b8aa6e534123b393154cfcfd446c6">ApiWorker::init</a></div><div class="ttdeci">void init()</div><div class="ttdoc">Inicjalizuje obiekt ApiWorker.</div><div class="ttdef"><b>Definicja</b> <a href="#l00083">apiworker.cpp:83</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_ac387ca7d37588a6355e5a538bcb72175"><div class="ttname"><a href="class_api_worker.html#ac387ca7d37588a6355e5a538bcb72175">ApiWorker::processRequest</a></div><div class="ttdeci">void processRequest(const QUrl &amp;url, int requestId)</div><div class="ttdoc">Przetwarza żądanie sieciowe dla podanego adresu URL.</div><div class="ttdef"><b>Definicja</b> <a href="#l00038">apiworker.cpp:38</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_ad56a07e518aeba6a7f456aa3648332c8"><div class="ttname"><a href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">ApiWorker::manager</a></div><div class="ttdeci">QNetworkAccessManager * manager</div><div class="ttdef"><b>Definicja</b> <a href="apiworker_8h_source.html#l00070">apiworker.h:70</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_af22b27b476a7d24319ba5befd5b67aa6"><div class="ttname"><a href="class_api_worker.html#af22b27b476a7d24319ba5befd5b67aa6">ApiWorker::~ApiWorker</a></div><div class="ttdeci">~ApiWorker()</div><div class="ttdoc">Destruktor klasy ApiWorker.</div><div class="ttdef"><b>Definicja</b> <a href="#l00026">apiworker.cpp:26</a></div></div>
+<div class="ttc" id="aclass_api_worker_html_af89cf8c1ff4595d6b62f7ad9d26fd4e8"><div class="ttname"><a href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">ApiWorker::replyToRequestId</a></div><div class="ttdeci">QMap&lt; QNetworkReply *, int &gt; replyToRequestId</div><div class="ttdef"><b>Definicja</b> <a href="apiworker_8h_source.html#l00071">apiworker.h:71</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="apiworker_8cpp.html">apiworker.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

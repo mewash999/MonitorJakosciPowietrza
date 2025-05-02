@@ -1,3 +1,8 @@
+/**
+ * @file measurementhandler.cpp
+ * @brief Implementacja klasy MeasurementHandler do obsługi danych pomiarowych i wizualizacji wykresów.
+ */
+
 #include "measurementhandler.h"
 
 /**

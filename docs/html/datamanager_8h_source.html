@@ -1,0 +1,112 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Plik źródłowy datamanager.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('datamanager_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">datamanager.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="datamanager_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#ifndef DATAMANAGER_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#define DATAMANAGER_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &lt;QString&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &lt;QByteArray&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &lt;QVector&gt;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &lt;QPair&gt;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span><span class="preprocessor">#include &lt;QStandardPaths&gt;</span></div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="preprocessor">#include &lt;QDir&gt;</span></div>
+<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span><span class="preprocessor">#include &lt;QFile&gt;</span></div>
+<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span><span class="preprocessor">#include &lt;QDateTime&gt;</span></div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span><span class="preprocessor">#include &lt;QJsonDocument&gt;</span></div>
+<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span><span class="preprocessor">#include &lt;QJsonArray&gt;</span></div>
+<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span> </div>
+<div class="foldopen" id="foldopen00021" data-start="{" data-end="};">
+<div class="line"><a id="l00021" name="l00021"></a><span class="lineno"><a class="line" href="class_data_manager.html">   21</a></span><span class="keyword">class </span><a class="code hl_class" href="class_data_manager.html">DataManager</a></div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>{</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <span class="keyword">static</span> QString <a class="code hl_function" href="class_data_manager.html#ac17e0ca2a1fd6e3ed815949b76f49d49">getDataFilePath</a>(<span class="keyword">const</span> QString &amp;baseFileName, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span></div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manager.html#a682af60b8e4aa6de864f3cf2a28ab993">saveDataToFile</a>(<span class="keyword">const</span> QString &amp;baseFileName, <span class="keyword">const</span> QByteArray &amp;data, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span></div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    <span class="keyword">static</span> QByteArray <a class="code hl_function" href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">loadDataFromFile</a>(<span class="keyword">const</span> QString &amp;baseFileName, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span></div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <span class="keyword">static</span> <span class="keywordtype">void</span> <a class="code hl_function" href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">saveHistoricalData</a>(<span class="keyword">const</span> QString &amp;type, <span class="keyword">const</span> QByteArray &amp;data, <span class="keywordtype">int</span> <span class="keywordtype">id</span> = -1);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span>    <span class="keyword">static</span> QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; <a class="code hl_function" href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">loadAllHistoricalData</a>(<span class="keyword">const</span> QString &amp;type, <span class="keywordtype">int</span> <span class="keywordtype">id</span>);</div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>};</div>
+</div>
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span> </div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span><span class="preprocessor">#endif</span></div>
+<div class="ttc" id="aclass_data_manager_html"><div class="ttname"><a href="class_data_manager.html">DataManager</a></div><div class="ttdef"><b>Definicja</b> <a href="#l00021">datamanager.h:22</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_a2b34a6855d3f5af47793e6bd7db152f3"><div class="ttname"><a href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">DataManager::saveHistoricalData</a></div><div class="ttdeci">static void saveHistoricalData(const QString &amp;type, const QByteArray &amp;data, int id=-1)</div><div class="ttdoc">Zapisuje historyczne dane do pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00086">datamanager.cpp:86</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_a682af60b8e4aa6de864f3cf2a28ab993"><div class="ttname"><a href="class_data_manager.html#a682af60b8e4aa6de864f3cf2a28ab993">DataManager::saveDataToFile</a></div><div class="ttdeci">static void saveDataToFile(const QString &amp;baseFileName, const QByteArray &amp;data, int id=-1)</div><div class="ttdoc">Zapisuje dane do pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00042">datamanager.cpp:42</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_abc87b1ff10d7c63ad9a7c3c952140de7"><div class="ttname"><a href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a></div><div class="ttdeci">static QByteArray loadDataFromFile(const QString &amp;baseFileName, int id=-1)</div><div class="ttdoc">Wczytuje dane z pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00061">datamanager.cpp:61</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_ac17e0ca2a1fd6e3ed815949b76f49d49"><div class="ttname"><a href="class_data_manager.html#ac17e0ca2a1fd6e3ed815949b76f49d49">DataManager::getDataFilePath</a></div><div class="ttdeci">static QString getDataFilePath(const QString &amp;baseFileName, int id=-1)</div><div class="ttdoc">Generuje ścieżkę do pliku danych na podstawie nazwy i identyfikatora.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00019">datamanager.cpp:19</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_aedf9b41b7ed88a159ce5190e62662b90"><div class="ttname"><a href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a></div><div class="ttdeci">static QVector&lt; QPair&lt; QDateTime, QByteArray &gt; &gt; loadAllHistoricalData(const QString &amp;type, int id)</div><div class="ttdoc">Wczytuje wszystkie historyczne dane pomiarów dla danego identyfikatora.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00121">datamanager.cpp:121</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="datamanager_8h.html">datamanager.h</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

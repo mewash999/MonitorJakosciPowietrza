@@ -1,3 +1,8 @@
+/**
+ * @file mainwindow.h
+ * @brief Definicja klasy MainWindow dla głównego okna aplikacji.
+ */
+
 #ifndef MAINWINDOW_H
 #define MAINWINDOW_H
 

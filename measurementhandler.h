@@ -1,3 +1,8 @@
+/**
+ * @file measurementhandler.h
+ * @brief Definicja klasy MeasurementHandler do obsługi danych pomiarowych.
+ */
+
 #ifndef MEASUREMENTHANDLER_H
 #define MEASUREMENTHANDLER_H
 

@@ -1,3 +1,8 @@
+/**
+ * @file apiclient.cpp
+ * @brief Implementacja klasy ApiClient do zarządzania żądaniami API.
+ */
+
 #include "apiclient.h"
 #include "apiworker.h"
 

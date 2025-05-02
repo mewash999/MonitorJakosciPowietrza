@@ -1,3 +1,8 @@
+/**
+ * @file main.cpp
+ * @brief Plik główny aplikacji, uruchamiający interfejs użytkownika.
+ */
+
 #include <QApplication>
 #include "mainwindow.h"
 

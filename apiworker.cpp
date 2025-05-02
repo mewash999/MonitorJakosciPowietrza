@@ -1,3 +1,8 @@
+/**
+ * @file apiworker.cpp
+ * @brief Implementacja klasy ApiWorker do wykonywania żądań sieciowych w oddzielnym wątku.
+ */
+
 #include "apiworker.h"
 
 /**

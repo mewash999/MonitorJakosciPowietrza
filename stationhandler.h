@@ -1,3 +1,8 @@
+/**
+ * @file stationhandler.h
+ * @brief Definicja klasy StationHandler do obsługi danych stacji.
+ */
+
 #ifndef STATIONHANDLER_H
 #define STATIONHANDLER_H
 

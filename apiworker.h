@@ -1,3 +1,8 @@
+/**
+ * @file apiworker.h
+ * @brief Definicja klasy ApiWorker do wykonywania żądań sieciowych w oddzielnym wątku.
+ */
+
 #ifndef APIWORKER_H
 #define APIWORKER_H
 

@@ -1,3 +1,8 @@
+/**
+ * @file stationhandler.cpp
+ * @brief Implementacja klasy StationHandler do obsługi danych stacji.
+ */
+
 #include "stationhandler.h"
 
 /**

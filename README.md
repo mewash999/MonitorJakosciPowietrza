@@ -29,7 +29,7 @@ Pobierz i zainstaluj Qt z oficjalnej strony wraz z wymaganymi pakietami.<br>
 Otwórz plik projektu (MJP.pro) w Qt Creator.<br>
 Skonfiguruj ustawienia kompilacji (qmake) i uruchom budowę programu.<br>
 
-## Pliki źródłowe:
+## Pliki źródłowe
 
 * `mainwindow.cpp, mainwindow.h`: Główna klasa okna aplikacji, obsługa interfejsu i logiki.<br>
 * `connectionmanager.cpp, connectionmanager.h`: Testowanie połączenia i przełączanie trybu online/offline.<br>
