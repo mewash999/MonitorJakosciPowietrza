@@ -7,62 +7,121 @@
  #define APICLIENT_H
  
  #include <QObject>
+ #include <QUrl>
  #include <QThread>
- #include "apiworker.h"
+ #include <QMap>
  
- class ApiClient : public QObject {
+ class ApiWorker;
+ 
+ class ApiClient : public QObject
+ {
      Q_OBJECT
+ 
  public:
      /**
       * @brief Konstruktor klasy ApiClient.
-      * @details Inicjalizuje obiekt ApiClient, tworząc nowy wątek i obiekt ApiWorker. Przenosi ApiWorker do oddzielnego wątku i konfiguruje połączenia sygnałów między ApiClient a ApiWorker, aby umożliwić przekazywanie danych i błędów. Uruchamia wątek, zapewniając asynchroniczną obsługę żądań.
-      * @param parent Wskaźnik na obiekt nadrzędny, domyślnie nullptr.
-      * @note Wątek i ApiWorker są zwalniane w destruktorze, aby zapobiec wyciekom pamięci.
+      *
+      * Inicjalizuje obiekt klasy ApiClient, tworząc nowy wątek roboczy (`workerThread`) oraz obiekt `ApiWorker`,
+      * który jest przenoszony do tego wątku. Ustawia połączenia sygnałów i slotów między `ApiClient` a `ApiWorker`,
+      * aby umożliwić asynchroniczne wysyłanie żądań API, odbieranie wyników oraz obsługę błędów. Wywołuje metodę
+      * `init` obiektu `ApiWorker` w sposób opóźniony (QueuedConnection) i uruchamia wątek roboczy.
+      *
+      * @param parent Wskaźnik na obiekt nadrzędny (QObject), domyślnie nullptr.
       */
      explicit ApiClient(QObject *parent = nullptr);
  
      /**
       * @brief Destruktor klasy ApiClient.
-      * @details Zatrzymuje wątek, w którym działa ApiWorker, i zwalnia zasoby, w tym obiekt ApiWorker i wątek. Zapewnia bezpieczne zakończenie wszystkich żądań sieciowych przed zniszczeniem obiektu.
+      *
+      * Zamyka wątek roboczy (`workerThread`) poprzez wywołanie `quit()` i czeka na jego zakończenie za pomocą
+      * `wait()`. Zapewnia poprawne zwolnienie zasobów związanych z wątkiem i obiektem `ApiWorker`.
       */
      ~ApiClient();
  
      /**
-      * @brief Inicjuje żądanie sieciowe dla podanego adresu URL.
-      * @details Przekazuje żądanie GET dla podanego adresu URL do obiektu ApiWorker w oddzielnym wątku. Po zakończeniu żądania ApiWorker emituje sygnały, które są przekazywane przez ApiClient jako dataReady (dla danych) lub errorOccurred (dla błędów).
-      * @param url Adres URL, z którego pobierane są dane.
-      * @note Funkcja nie wykonuje żądania bezpośrednio, lecz deleguje je do ApiWorker, zapewniając asynchroniczność.
-      * @see ApiWorker::fetchData
+      * @brief Wysyła żądanie pobrania danych z podanego adresu URL.
+      *
+      * Generuje unikalny identyfikator żądania (`requestId`) i emituje sygnał `requestApiData` z podanym adresem
+      * URL oraz identyfikatorem. Żądanie jest przekazywane do obiektu `ApiWorker` w celu asynchronicznego
+      * przetworzenia w osobnym wątku.
+      *
+      * @param url Adres URL, z którego mają zostać pobrane dane (np. lista stacji lub czujników).
+      * @note Funkcja zwiększa licznik `nextRequestId` dla każdego nowego żądania.
       */
      void fetchData(const QUrl &url);
  
      /**
-      * @brief Inicjuje żądanie sieciowe dla danych czujników stacji.
-      * @details Przekazuje żądanie GET dla danych czujników stacji o podanym identyfikatorze do obiektu ApiWorker w oddzielnym wątku. Po zakończeniu żądania ApiWorker emituje sygnały, które są przekazywane przez ApiClient jako dataReady (dla danych) lub errorOccurred (dla błędów).
-      * @param stationId Identyfikator stacji, dla której pobierane są dane czujników.
-      * @note Funkcja deleguje żądanie do ApiWorker, który generuje odpowiedni URL na podstawie stationId.
-      * @see ApiWorker::fetchSensorData
+      * @brief Wysyła żądanie pobrania danych dla konkretnego czujnika na podstawie jego identyfikatora.
+      *
+      * Tworzy adres URL w formacie specyficznym dla API (https://api.gios.gov.pl/pjp-api/rest/data/getData/<sensorId>),
+      * generuje unikalny identyfikator żądania (`requestId`) i emituje sygnał `requestApiData` z utworzonym adresem
+      * URL oraz identyfikatorem. Żądanie jest przekazywane do obiektu `ApiWorker` w celu asynchronicznego
+      * przetworzenia w osobnym wątku.
+      *
+      * @param sensorId Identyfikator czujnika, dla którego mają zostać pobrane dane pomiarowe.
+      * @note Funkcja zwiększa licznik `nextRequestId` dla każdego nowego żądania.
       */
-     void fetchSensorData(int stationId);
+     void fetchSensorData(int sensorId);
  
  signals:
      /**
-      * @brief Sygnał emitowany po pomyślnym pobraniu danych.
-      * @details Emitowany, gdy żądanie sieciowe zakończy się sukcesem, przekazując pobrane dane w formacie QByteArray do slotów podłączonych do tego sygnału.
-      * @param data Pobrane dane w formacie QByteArray.
+      * @brief Sygnał emitowany, gdy dane z żądania API są gotowe.
+      *
+      * Przekazuje zwrócone dane w formacie QString do slotów podłączonych do tego sygnału (np. `MainWindow::onDataReady`).
+      *
+      * @param data Dane zwrócone w odpowiedzi na żądanie API.
       */
-     void dataReady(const QByteArray &data);
+     void dataReady(const QString &data);
  
      /**
-      * @brief Sygnał emitowany w przypadku błędu sieciowego.
-      * @details Emitowany, gdy żądanie sieciowe zakończy się niepowodzeniem, przekazując opis błędu w formacie QString do slotów podłączonych do tego sygnału.
-      * @param errorString Opis błędu sieciowego.
+      * @brief Sygnał emitowany, gdy wystąpi błąd podczas przetwarzania żądania API.
+      *
+      * Przekazuje opis błędu w formacie QString do slotów podłączonych do tego sygnału (np. `MainWindow::onErrorOccurred`).
+      *
+      * @param error Opis błędu zwrócony przez `ApiWorker`.
       */
-     void errorOccurred(const QString &errorString);
+     void errorOccurred(const QString &error);
+ 
+     /**
+      * @brief Sygnał emitowany w celu przekazania żądania API do ApiWorker.
+      *
+      * Przekazuje adres URL oraz identyfikator żądania do slotu `ApiWorker::processRequest` w celu asynchronicznego
+      * przetworzenia.
+      *
+      * @param url Adres URL żądania API.
+      * @param requestId Identyfikator żądania.
+      */
+     void requestApiData(const QUrl &url, int requestId);
+ 
+ private slots:
+     /**
+      * @brief Obsługuje wyniki żądania zwrócone przez ApiWorker.
+      *
+      * Odbiera dane zwrócone przez `ApiWorker`, emituje sygnał `dataReady` z wynikami oraz usuwa identyfikator
+      * żądania z mapy `requestTypes`. Wyświetla informację debugującą z identyfikatorem bieżącego wątku.
+      *
+      * @param result Dane zwrócone w odpowiedzi na żądanie API, w formacie QString.
+      * @param requestId Identyfikator żądania, dla którego zwrócono wyniki.
+      */
+     void handleResults(const QString &result, int requestId);
+ 
+     /**
+      * @brief Obsługuje błędy zgłoszone przez ApiWorker.
+      *
+      * Odbiera opis błędu zwrócony przez `ApiWorker`, emituje sygnał `errorOccurred` oraz usuwa identyfikator
+      * żądania z mapy `requestTypes`.
+      *
+      * @param error Opis błędu zwrócony w odpowiedzi na żądanie API, w formacie QString.
+      * @param requestId Identyfikator żądania, dla którego zgłoszono błąd.
+      */
+     void handleErrors(const QString &error, int requestId);
  
  private:
-     QThread workerThread; ///< Wątek, w którym działa obiekt ApiWorker.
-     ApiWorker *worker;    ///< Wskaźnik na obiekt ApiWorker do obsługi żądań sieciowych.
+     ApiWorker *worker;
+     QThread workerThread;
+     int nextRequestId;
+     QMap<int, QString> requestTypes;
  };
  
  #endif
+ 
