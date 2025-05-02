@@ -1,8 +1,3 @@
-/**
- * @file mainwindow.cpp
- * @brief Implementacja klasy MainWindow, głównego okna aplikacji.
- */
-
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "apiclient.h"
@@ -14,7 +9,14 @@
 
 /**
  * @brief Konstruktor klasy MainWindow.
- * @param parent Wskaźnik na obiekt nadrzędny.
+ * 
+ * Inicjalizuje główne okno aplikacji, konfiguruje interfejs użytkownika, ustawia tytuł okna, ikonę 
+ * i tworzy obiekty `ApiClient` oraz `ConnectionManager`. Inicjalizuje timery dla zegara 
+ * (aktualizacja co 100 ms) i sprawdzania połączenia (co 10 sekund). Konfiguruje połączenia sygnałów 
+ * i slotów, ustala kolejność fokusu dla elementów interfejsu, instaluje filtry zdarzeń dla przycisków 
+ * oraz włącza antyaliasing dla wykresu.
+ * 
+ * @param parent Wskaźnik na obiekt nadrzędny (QWidget), domyślnie nullptr.
  */
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
@@ -31,7 +33,7 @@ MainWindow::MainWindow(QWidget *parent)
     qDebug() << "Main UI - thread:" << QThread::currentThreadId();
 
     isOffline = true;
-    connectionManager->checkConnectionAndReloadStations(apiClient, ui->stationList, ui->lblStatus, ui->lblStationCount, isOffline, allStations);
+    connectionManager->checkConnectionAndReloadStations(apiClient, ui->stationList, ui->lblStatus, ui->lblStationCount, isOffline, allStations);;
 
     connect(apiClient, &ApiClient::dataReady, this, &MainWindow::onDataReady);
     connect(apiClient, &ApiClient::errorOccurred, this, &MainWindow::onErrorOccurred);
@@ -72,14 +74,21 @@ MainWindow::MainWindow(QWidget *parent)
 
 /**
  * @brief Destruktor klasy MainWindow.
+ * 
+ * Zwalnia zasoby związane z interfejsem użytkownika (`ui`) oraz obiektami podrzędnymi.
  */
 MainWindow::~MainWindow() {
     delete ui;
 }
 
 /**
- * @brief Obsługuje gotowe dane z API.
- * @param data Otrzymane dane w formacie QString.
+ * @brief Obsługuje dane zwrócone przez ApiClient.
+ * 
+ * Parsuje dane JSON i w zależności od ich typu (stacje, czujniki, pomiary) zapisuje je jako dane historyczne 
+ * za pomocą `DataManager`. Aktualizuje listy stacji lub czujników, statystyki lub wykres w interfejsie użytkownika. 
+ * W przypadku błędnych danych lub braku danych online wyświetla odpowiedni komunikat.
+ * 
+ * @param data Dane w formacie QString (JSON).
  */
 void MainWindow::onDataReady(const QString &data) {
     QJsonDocument doc = QJsonDocument::fromJson(data.toUtf8());
@@ -119,8 +128,12 @@ void MainWindow::onDataReady(const QString &data) {
 }
 
 /**
- * @brief Obsługuje błędy API.
- * @param error Opis błędu.
+ * @brief Obsługuje błędy zgłoszone przez ApiClient.
+ * 
+ * Wyświetla komunikat o błędzie na etykiecie statusu i próbuje wczytać dane lokalne (stacje, czujniki lub pomiary) 
+ * w zależności od kontekstu (bieżącej stacji lub czujnika). Jeśli dane lokalne są dostępne, wywołuje `onDataReady`.
+ * 
+ * @param error Opis błędu w formacie QString.
  */
 void MainWindow::onErrorOccurred(const QString &error) {
     lblStatus->setText("Błąd: " + error);
@@ -143,7 +156,12 @@ void MainWindow::onErrorOccurred(const QString &error) {
 
 /**
  * @brief Obsługuje kliknięcie elementu listy stacji.
- * @param item Wskaźnik na kliknięty element listy.
+ * 
+ * Aktualizuje identyfikator bieżącej stacji, miasto i adres na podstawie klikniętego elementu. 
+ * W trybie offline wczytuje dane czujników z pliku lokalnego, w trybie online wysyła żądanie API 
+ * dla czujników danej stacji.
+ * 
+ * @param item Wskaźnik na kliknięty element listy `QListWidgetItem`.
  */
 void MainWindow::on_stationList_itemClicked(QListWidgetItem *item) {
     ui->lblStats->clear();
@@ -180,7 +198,12 @@ void MainWindow::on_stationList_itemClicked(QListWidgetItem *item) {
 
 /**
  * @brief Obsługuje kliknięcie elementu listy czujników.
- * @param item Wskaźnik na kliknięty element listy.
+ * 
+ * Aktualizuje identyfikator bieżącego czujnika i nazwę parametru na podstawie klikniętego elementu. 
+ * W trybie offline wczytuje i agreguje dane historyczne dla czujnika, w trybie online wysyła żądanie API 
+ * dla danych pomiarowych czujnika.
+ * 
+ * @param item Wskaźnik na kliknięty element listy `QListWidgetItem`.
  */
 void MainWindow::on_sensorList_itemClicked(QListWidgetItem *item) {
     ui->lblStats->clear();
@@ -239,6 +262,10 @@ void MainWindow::on_sensorList_itemClicked(QListWidgetItem *item) {
 
 /**
  * @brief Obsługuje kliknięcie przycisku historii.
+ * 
+ * Wczytuje wszystkie dane historyczne dla bieżącego czujnika, agreguje je w posortowanym wektorze 
+ * i aktualizuje statystyki oraz wykres w interfejsie użytkownika. Wyświetla odpowiedni komunikat 
+ * w zależności od dostępności danych.
  */
 void MainWindow::on_btnHistory_clicked() {
     if (currentSensorId == -1) {
@@ -285,8 +312,13 @@ void MainWindow::on_btnHistory_clicked() {
 }
 
 /**
- * @brief Wczytuje dane historyczne dla określonej liczby dni.
- * @param days Liczba dni do wczytania danych.
+ * @brief Wczytuje historyczne dane pomiarów dla określonego zakresu dni.
+ * 
+ * Wczytuje dane historyczne dla bieżącego czujnika z ostatnich `days` dni, agreguje je w posortowanym 
+ * wektorze i aktualizuje statystyki oraz wykres w interfejsie użytkownika. Wyświetla odpowiedni komunikat 
+ * w zależności od dostępności danych.
+ * 
+ * @param days Liczba dni do wczytania (np. 7 lub 14).
  */
 void MainWindow::loadHistoricalData(int days) {
     if (currentSensorId == -1) {
@@ -337,7 +369,10 @@ void MainWindow::loadHistoricalData(int days) {
 }
 
 /**
- * @brief Aktualizuje zegar w interfejsie.
+ * @brief Aktualizuje zegar w interfejsie użytkownika.
+ * 
+ * Pobiera bieżącą datę i godzinę, formatuje je w formacie "dd.MM.yyyy - hh:mm:ss" 
+ * i wyświetla na etykiecie `lblTime`.
  */
 void MainWindow::updateClock() {
     QString currentTime = QDateTime::currentDateTime().toString("dd.MM.yyyy - hh:mm:ss");
@@ -346,6 +381,9 @@ void MainWindow::updateClock() {
 
 /**
  * @brief Obsługuje zdarzenie pokazania okna.
+ * 
+ * Wywołuje metodę bazową `showEvent` i ustawia fokus na polu wyszukiwania stacji (`stationSearch`).
+ * 
  * @param event Wskaźnik na obiekt zdarzenia pokazania.
  */
 void MainWindow::showEvent(QShowEvent *event) {
@@ -354,8 +392,13 @@ void MainWindow::showEvent(QShowEvent *event) {
 }
 
 /**
- * @brief Obsługuje zdarzenia klawiatury.
- * @param event Wskaźnik na obiekt zdarzenia klawiatury.
+ * @brief Obsługuje zdarzenia naciśnięcia klawisza.
+ * 
+ * Przetwarza naciśnięcia klawiszy Enter lub Return, wywołując odpowiednie akcje dla fokusu na liście stacji, 
+ * liście czujników lub przyciskach (historia, ostatnie 7/14 dni). W innych przypadkach przekazuje zdarzenie 
+ * do metody bazowej.
+ * 
+ * @param event Wskaźnik na obiekt zdarzenia klawisza.
  */
 void MainWindow::keyPressEvent(QKeyEvent *event) {
     if (event->key() == Qt::Key_Return || event->key() == Qt::Key_Enter) {
@@ -384,10 +427,14 @@ void MainWindow::keyPressEvent(QKeyEvent *event) {
 }
 
 /**
- * @brief Filtruje zdarzenia dla obiektów interfejsu.
- * @param obj Wskaźnik na obiekt, dla którego filtrowane jest zdarzenie.
+ * @brief Filtruje zdarzenia dla obiektów interfejsu użytkownika.
+ * 
+ * Blokuje klawisze strzałek, spacji oraz innych dla przycisków (`btnLast7Days`, `btnLast14Days`, `btnHistory`), 
+ * aby zapewnić poprawną nawigację w interfejsie. W innych przypadkach przekazuje zdarzenie do metody bazowej.
+ * 
+ * @param obj Obiekt, dla którego filtrowane jest zdarzenie.
  * @param event Wskaźnik na obiekt zdarzenia.
- * @return True, jeśli zdarzenie zostało przetworzone, false w przeciwnym razie.
+ * @return bool Wartość true, jeśli zdarzenie zostało przetworzone, false w przeciwnym razie.
  */
 bool MainWindow::eventFilter(QObject *obj, QEvent *event) {
     if (event->type() == QEvent::KeyPress) {

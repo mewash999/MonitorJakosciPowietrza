@@ -1,57 +1,42 @@
-/**
- * @file measurementhandler.h
- * @brief Definicja klasy MeasurementHandler do obsługi danych pomiarowych.
- */
+#ifndef STATIONHANDLER_H
+#define STATIONHANDLER_H
 
- #ifndef MEASUREMENTHANDLER_H
- #define MEASUREMENTHANDLER_H
- 
- #include <QJsonObject>
- #include <QLabel>
- #include <QtCharts/QChartView>
- #include <QDateTime>
- #include <QtCharts>
- #include <QJsonArray>
- #include <QChart>
- #include <QLineSeries>
- #include <QDateTimeAxis>
- #include <QValueAxis>
- #include <QFont>
- #include <algorithm>
- #include <numeric>
- 
- /**
-  * @class MeasurementHandler
-  * @brief Klasa statyczna do przetwarzania i wizualizacji danych pomiarowych.
-  */
- class MeasurementHandler
- {
- public:
-     /**
-      * @brief Przetwarza dane pomiarowe i aktualizuje statystyki.
-      * @param obj Obiekt JSON z danymi pomiarowymi.
-      * @param customData Wektor niestandardowych danych pomiarowych.
-      * @param lblStats Wskaźnik na etykietę statystyk.
-      */
-     static void handleMeasurementsData(const QJsonObject &obj, const QVector<QPair<QDateTime, double>> &customData, QLabel *lblStats);
- 
-     /**
-      * @brief Aktualizuje wykres na podstawie danych pomiarowych.
-      * @param data Wektor danych pomiarowych (czas, wartość).
-      * @param chartView Wskaźnik na widok wykresu.
-      * @param stationCity Nazwa miasta stacji.
-      * @param stationAddress Adres stacji.
-      * @param paramName Nazwa parametru.
-      */
-     static void updateChart(const QVector<QPair<QDateTime, double>> &data, QChartView *chartView, const QString &stationCity, const QString &stationAddress, const QString &paramName);
- 
- private:
-     /**
-      * @brief Analizuje trend danych pomiarowych.
-      * @param data Wektor danych pomiarowych (czas, wartość).
-      * @return Tekstowy opis trendu ("WZROSTOWY", "SPADKOWY", "STABILNY").
-      */
-     static QString analyzeTrend(const QVector<QPair<QDateTime, double>> &data);
- };
- 
- #endif
+#include <QJsonArray>
+#include <QListWidget>
+#include <QLabel>
+#include <QJsonObject>
+#include <QString>
+#include <algorithm>
+#include <QJsonObject>
+
+class StationHandler
+{
+public:
+    /**
+     * @brief Przetwarza dane stacji z tablicy JSON i aktualizuje listę stacji.
+     * 
+     * Przetwarza tablicę JSON z danymi stacji, tworząc listę stacji w formacie "<miasto> | <adres lub nazwa stacji>" 
+     * i zapisuje je w wektorze `allStations`. Aktualizuje interfejs użytkownika poprzez wywołanie `updateStationList`.
+     * 
+     * @param array Tablica JSON zawierająca dane stacji.
+     * @param stationList Wskaźnik na `QListWidget`, w którym wyświetlane są nazwy stacji.
+     * @param lblStationCount Wskaźnik na `QLabel` wyświetlający liczbę stacji.
+     * @param allStations Referencja do listy przechowującej pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji.
+     */
+    static void handleStationsData(const QJsonArray &array, QListWidget *stationList, QLabel *lblStationCount, QList<QPair<QString, QJsonObject>> &allStations);
+
+    /**
+     * @brief Aktualizuje listę stacji w interfejsie użytkownika na podstawie filtra.
+     * 
+     * Filtruje i sortuje stacje z listy `allStations` według podanego filtra tekstowego, 
+     * aktualizuje `stationList` i etykietę `lblStationCount` z liczbą stacji.
+     * 
+     * @param filter Tekst filtra do wyszukiwania stacji (pusty filtr oznacza brak filtrowania).
+     * @param stationList Wskaźnik na `QListWidget`, w którym wyświetlane są nazwy stacji.
+     * @param lblStationCount Wskaźnik na `QLabel` wyświetlający liczbę stacji.
+     * @param allStations Lista przechowująca pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji.
+     */
+    static void updateStationList(const QString &filter, QListWidget *stationList, QLabel *lblStationCount, const QList<QPair<QString, QJsonObject>> &allStations);
+};
+
+#endif
