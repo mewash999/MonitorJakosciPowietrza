@@ -33,7 +33,17 @@ void StationHandler::handleStationsData(const QJsonArray &array, QListWidget *st
         QString name = obj["stationName"].toString();
         QString city = obj["city"].toObject()["name"].toString();
         QString address = obj["addressStreet"].toString();
-        QString display = city + "  |  " + (!address.isEmpty() ? address : name);
+        QString display = city;
+        QString additionalInfo = "";
+
+        if (!address.trimmed().isEmpty()) {
+            additionalInfo = address;
+        } else if (!name.trimmed().isEmpty()) {
+            additionalInfo = name;
+        }
+        if (!additionalInfo.isEmpty()) {
+            display += " | " + additionalInfo;
+        }
         allStations.append(qMakePair(display, obj));
     }
     updateStationList("", stationList, lblStationCount, allStations);

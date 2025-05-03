@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     this->setWindowTitle("Made by Miłosz Kurpisz");
     this->setWindowIcon(QIcon(":/icons/icon.ico"));
 
-    qDebug() << "Main UI - thread:" << QThread::currentThreadId();
+    //qDebug() << "Main UI - thread:" << QThread::currentThreadId();
 
     isOffline = true;
     connectionManager->checkConnectionAndReloadStations(apiClient, ui->stationList, ui->lblStatus, ui->lblStationCount, isOffline, allStations);;
@@ -51,7 +51,7 @@ MainWindow::MainWindow(QWidget *parent)
     connect(connectionCheckTimer, &QTimer::timeout, [=]() {
         connectionManager->checkConnectionAndReloadStations(apiClient, ui->stationList, ui->lblStatus, ui->lblStationCount, isOffline, allStations);
     });
-    connectionCheckTimer->start(10000);
+    connectionCheckTimer->start(5000);
 
     connect(ui->stationSearch, &QLineEdit::textChanged, [=](const QString &text) {
         StationHandler::updateStationList(text, ui->stationList, ui->lblStationCount, allStations);
