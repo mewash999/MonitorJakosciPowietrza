@@ -15,7 +15,7 @@
  */
 ApiWorker::ApiWorker(QObject *parent) : QObject(parent)
 {
-    qDebug() << "ApiWorker constructor - thread:" << QThread::currentThreadId();
+    //qDebug() << "ApiWorker constructor - thread:" << QThread::currentThreadId();
 }
 
 /**
@@ -71,7 +71,7 @@ void ApiWorker::onReplyFinished(QNetworkReply *reply)
     if (replyToRequestId.isEmpty()) {
         emit finished();
     }
-    qDebug() << "onReplyFinished — thread:" << QThread::currentThreadId();
+    //qDebug() << "onReplyFinished — thread:" << QThread::currentThreadId();
 }
 
 /**
@@ -83,5 +83,5 @@ void ApiWorker::onReplyFinished(QNetworkReply *reply)
 void ApiWorker::init() {
     manager = new QNetworkAccessManager(this);
     connect(manager, &QNetworkAccessManager::finished, this, &ApiWorker::onReplyFinished);
-    qDebug() << "ApiWorker::init() — thread:" << QThread::currentThreadId();
+    //qDebug() << "ApiWorker::init() — thread:" << QThread::currentThreadId();
 }

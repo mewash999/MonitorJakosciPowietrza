@@ -89,7 +89,7 @@ void ApiClient::handleResults(const QString &result, int requestId)
 {
     emit dataReady(result);
     requestTypes.remove(requestId);
-    qDebug() << "handleResults — thread:" << QThread::currentThreadId();
+    //qDebug() << "handleResults — thread:" << QThread::currentThreadId();
 }
 
 /**
