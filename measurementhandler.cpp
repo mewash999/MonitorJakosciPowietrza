@@ -1,5 +1,21 @@
+/**
+ * @file measurementhandler.cpp
+ * @brief Implementacja klasy MeasurementHandler do obsługi danych pomiarowych i wizualizacji wykresów.
+ */
+
 #include "measurementhandler.h"
 
+/**
+ * @brief Przetwarza dane pomiarowe i aktualizuje statystyki w interfejsie użytkownika.
+ * 
+ * Przetwarza dane pomiarowe z wektora `customData` lub z obiektu JSON (`obj`), tworząc posortowaną listę 
+ * pomiarów (czas, wartość). Oblicza minimalną, maksymalną i średnią wartość oraz trend danych, 
+ * a następnie aktualizuje etykietę `lblStats` z wynikami w formacie tekstowym.
+ * 
+ * @param obj Obiekt JSON zawierający dane pomiarowe (używany, jeśli `customData` jest puste).
+ * @param customData Wektor par (czas, wartość) z danymi pomiarowymi.
+ * @param lblStats Wskaźnik na `QLabel`, w którym wyświetlane są statystyki.
+ */
 void MeasurementHandler::handleMeasurementsData(const QJsonObject &obj, const QVector<QPair<QDateTime, double>> &customData, QLabel *lblStats) {
     QVector<QPair<QDateTime, double>> measurements = customData;
 
@@ -35,6 +51,16 @@ void MeasurementHandler::handleMeasurementsData(const QJsonObject &obj, const QV
     }
 }
 
+/**
+ * @brief Analizuje trend danych pomiarowych.
+ * 
+ * Oblicza nachylenie linii regresji liniowej dla danych pomiarowych, aby określić trend: 
+ * "STABILNY" (nachylenie bliskie 0), "WZROSTOWY" (nachylenie dodatnie) lub "SPADKOWY" (nachylenie ujemne). 
+ * Zwraca "Brak danych", jeśli danych jest mniej niż 2.
+ * 
+ * @param data Wektor par (czas, wartość) z danymi pomiarowymi.
+ * @return QString Tekst opisujący trend ("STABILNY", "WZROSTOWY", "SPADKOWY" lub "Brak danych").
+ */
 QString MeasurementHandler::analyzeTrend(const QVector<QPair<QDateTime, double>> &data) {
     if (data.size() < 2) return "Brak danych";
 
@@ -60,6 +86,20 @@ QString MeasurementHandler::analyzeTrend(const QVector<QPair<QDateTime, double>>
     else return "SPADKOWY";
 }
 
+/**
+ * @brief Aktualizuje wykres danych pomiarowych w interfejsie użytkownika.
+ * 
+ * Tworzy nowy wykres liniowy na podstawie danych pomiarowych, konfiguruje osie czasu (X) i wartości (Y), 
+ * ustala zakresy osi z marginesem oraz formatuje tytuł wykresu z informacjami o stacji i parametrze. 
+ * Usuwa poprzedni wykres, jeśli istnieje, i ustawia nowy w `chartView`.
+ * 
+ * @param data Wektor par (czas, wartość) z danymi pomiarowymi.
+ * @param chartView Wskaźnik na `QChartView`, w którym wyświetlany jest wykres.
+ * @param stationCity Nazwa miasta stacji.
+ * @param stationAddress Adres stacji.
+ * @param paramName Nazwa parametru czujnika.
+ * @note Funkcja kończy działanie, jeśli dane są puste.
+ */
 void MeasurementHandler::updateChart(const QVector<QPair<QDateTime, double>> &data, QChartView *chartView, const QString &stationCity, const QString &stationAddress, const QString &paramName) {
     if (data.isEmpty()) return;
 

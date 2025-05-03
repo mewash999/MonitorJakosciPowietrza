@@ -1,0 +1,221 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Dokumentacja klasy StationHandler</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_station_handler.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Statyczne metody publiczne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy StationHandler</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="stationhandler_8h_source.html">stationhandler.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:ac3f14b21a8554f54a68b76cef4508e40" id="r_ac3f14b21a8554f54a68b76cef4508e40"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac3f14b21a8554f54a68b76cef4508e40">handleStationsData</a> (const QJsonArray &amp;array, QListWidget *stationList, QLabel *lblStationCount, QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</td></tr>
+<tr class="memdesc:ac3f14b21a8554f54a68b76cef4508e40"><td class="mdescLeft">&#160;</td><td class="mdescRight">Przetwarza dane stacji z tablicy JSON i aktualizuje listę stacji.  <br /></td></tr>
+<tr class="separator:ac3f14b21a8554f54a68b76cef4508e40"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c0d8162ed8fa9bf353b316b5d3955b2" id="r_a4c0d8162ed8fa9bf353b316b5d3955b2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a4c0d8162ed8fa9bf353b316b5d3955b2">updateStationList</a> (const QString &amp;filter, QListWidget *stationList, QLabel *lblStationCount, const QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</td></tr>
+<tr class="memdesc:a4c0d8162ed8fa9bf353b316b5d3955b2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Aktualizuje listę stacji w interfejsie użytkownika na podstawie filtra.  <br /></td></tr>
+<tr class="separator:a4c0d8162ed8fa9bf353b316b5d3955b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="stationhandler_8h_source.html#l00017">17</a> pliku <a class="el" href="stationhandler_8h_source.html">stationhandler.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ac3f14b21a8554f54a68b76cef4508e40" name="ac3f14b21a8554f54a68b76cef4508e40"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac3f14b21a8554f54a68b76cef4508e40">&#9670;&#160;</a></span>handleStationsData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StationHandler::handleStationsData </td>
+          <td>(</td>
+          <td class="paramtype">const QJsonArray &amp;</td>          <td class="paramname"><span class="paramname"><em>array</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QListWidget *</td>          <td class="paramname"><span class="paramname"><em>stationList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QLabel *</td>          <td class="paramname"><span class="paramname"><em>lblStationCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>allStations</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Przetwarza dane stacji z tablicy JSON i aktualizuje listę stacji. </p>
+<p>Przetwarza tablicę JSON z danymi stacji, tworząc listę stacji w formacie "&lt;miasto&gt; | &lt;adres lub nazwa stacji&gt;" i zapisuje je w wektorze <code>allStations</code>. Aktualizuje interfejs użytkownika poprzez wywołanie <code>updateStationList</code>.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>Tablica JSON zawierająca dane stacji. </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na <code>QListWidget</code>, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na <code>QLabel</code> wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Referencja do listy przechowującej pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Czyści listę stacji (<code>stationList</code>) oraz wektor <code>allStations</code>, a następnie przetwarza tablicę JSON zawierającą dane stacji. Dla każdej stacji wyciąga nazwę stacji, miasto i adres, tworząc tekst wyświetlany w formacie "&lt;miasto&gt; | &lt;adres lub nazwa stacji&gt;". Zapisuje dane w wektorze <code>allStations</code> jako pary (tekst wyświetlany, obiekt JSON). Następnie wywołuje <code>updateStationList</code> w celu aktualizacji interfejsu użytkownika bez filtrowania.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">array</td><td>Tablica JSON zawierająca dane stacji. </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na <code>QListWidget</code>, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na <code>QLabel</code> wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Referencja do listy przechowującej pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Funkcja kończy działanie, jeśli tablica JSON jest pusta. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="stationhandler_8cpp_source.html#l00023">23</a> pliku <a class="el" href="stationhandler_8cpp_source.html">stationhandler.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a4c0d8162ed8fa9bf353b316b5d3955b2" name="a4c0d8162ed8fa9bf353b316b5d3955b2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c0d8162ed8fa9bf353b316b5d3955b2">&#9670;&#160;</a></span>updateStationList()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void StationHandler::updateStationList </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>filter</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QListWidget *</td>          <td class="paramname"><span class="paramname"><em>stationList</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">QLabel *</td>          <td class="paramname"><span class="paramname"><em>lblStationCount</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;</td>          <td class="paramname"><span class="paramname"><em>allStations</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Aktualizuje listę stacji w interfejsie użytkownika na podstawie filtra. </p>
+<p>Filtruje i sortuje stacje z listy <code>allStations</code> według podanego filtra tekstowego, aktualizuje <code>stationList</code> i etykietę <code>lblStationCount</code> z liczbą stacji.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>Tekst filtra do wyszukiwania stacji (pusty filtr oznacza brak filtrowania). </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na <code>QListWidget</code>, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na <code>QLabel</code> wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Lista przechowująca pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Czyści listę stacji (<code>stationList</code>) i tworzy nową listę stacji na podstawie wektora <code>allStations</code>, uwzględniając podany filtr tekstowy (ignorując wielkość liter). Sortuje stacje alfabetycznie według tekstu wyświetlanego i dodaje je do <code>stationList</code> jako elementy <code>QListWidgetItem</code> z przypisanym identyfikatorem w danych użytkownika. Jeśli lista nie jest pusta, wybiera i podświetla pierwszy element. Aktualizuje etykietę <code>lblStationCount</code> z liczbą stacji.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">filter</td><td>Tekst filtra do wyszukiwania stacji (pusty filtr oznacza brak filtrowania). </td></tr>
+    <tr><td class="paramname">stationList</td><td>Wskaźnik na <code>QListWidget</code>, w którym wyświetlane są nazwy stacji. </td></tr>
+    <tr><td class="paramname">lblStationCount</td><td>Wskaźnik na <code>QLabel</code> wyświetlający liczbę stacji. </td></tr>
+    <tr><td class="paramname">allStations</td><td>Lista przechowująca pary (tekst wyświetlany, obiekt JSON) dla wszystkich stacji. </td></tr>
+  </table>
+  </dd>
+</dl>
+
+<p class="definition">Definicja w linii <a class="el" href="stationhandler_8cpp_source.html#l00056">56</a> pliku <a class="el" href="stationhandler_8cpp_source.html">stationhandler.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="stationhandler_8h_source.html">stationhandler.h</a></li>
+<li><a class="el" href="stationhandler_8cpp_source.html">stationhandler.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_station_handler.html">StationHandler</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

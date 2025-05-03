@@ -1,0 +1,375 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Dokumentacja klasy DataManager</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('class_data_manager.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="summary">
+<a href="#pub-static-methods">Statyczne metody publiczne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy DataManager</div></div>
+</div><!--header-->
+<div class="contents">
+
+<p><code>#include &lt;<a class="el" href="datamanager_8h_source.html">datamanager.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
+Statyczne metody publiczne</h2></td></tr>
+<tr class="memitem:ac17e0ca2a1fd6e3ed815949b76f49d49" id="r_ac17e0ca2a1fd6e3ed815949b76f49d49"><td class="memItemLeft" align="right" valign="top">static QString&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#ac17e0ca2a1fd6e3ed815949b76f49d49">getDataFilePath</a> (const QString &amp;baseFileName, int id=-1)</td></tr>
+<tr class="memdesc:ac17e0ca2a1fd6e3ed815949b76f49d49"><td class="mdescLeft">&#160;</td><td class="mdescRight">Generuje ścieżkę do pliku danych na podstawie nazwy i identyfikatora.  <br /></td></tr>
+<tr class="separator:ac17e0ca2a1fd6e3ed815949b76f49d49"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a682af60b8e4aa6de864f3cf2a28ab993" id="r_a682af60b8e4aa6de864f3cf2a28ab993"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a682af60b8e4aa6de864f3cf2a28ab993">saveDataToFile</a> (const QString &amp;baseFileName, const QByteArray &amp;data, int id=-1)</td></tr>
+<tr class="memdesc:a682af60b8e4aa6de864f3cf2a28ab993"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zapisuje dane do pliku JSON.  <br /></td></tr>
+<tr class="separator:a682af60b8e4aa6de864f3cf2a28ab993"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc87b1ff10d7c63ad9a7c3c952140de7" id="r_abc87b1ff10d7c63ad9a7c3c952140de7"><td class="memItemLeft" align="right" valign="top">static QByteArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#abc87b1ff10d7c63ad9a7c3c952140de7">loadDataFromFile</a> (const QString &amp;baseFileName, int id=-1)</td></tr>
+<tr class="memdesc:abc87b1ff10d7c63ad9a7c3c952140de7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje dane z pliku JSON.  <br /></td></tr>
+<tr class="separator:abc87b1ff10d7c63ad9a7c3c952140de7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b34a6855d3f5af47793e6bd7db152f3" id="r_a2b34a6855d3f5af47793e6bd7db152f3"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#a2b34a6855d3f5af47793e6bd7db152f3">saveHistoricalData</a> (const QString &amp;type, const QByteArray &amp;data, int id=-1)</td></tr>
+<tr class="memdesc:a2b34a6855d3f5af47793e6bd7db152f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Zapisuje historyczne dane do pliku JSON.  <br /></td></tr>
+<tr class="separator:a2b34a6855d3f5af47793e6bd7db152f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aedf9b41b7ed88a159ce5190e62662b90" id="r_aedf9b41b7ed88a159ce5190e62662b90"><td class="memItemLeft" align="right" valign="top">static QVector&lt; QPair&lt; QDateTime, QByteArray &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="#aedf9b41b7ed88a159ce5190e62662b90">loadAllHistoricalData</a> (const QString &amp;type, int id)</td></tr>
+<tr class="memdesc:aedf9b41b7ed88a159ce5190e62662b90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wczytuje wszystkie historyczne dane pomiarów dla danego identyfikatora.  <br /></td></tr>
+<tr class="separator:aedf9b41b7ed88a159ce5190e62662b90"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock">
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8h_source.html#l00021">21</a> pliku <a class="el" href="datamanager_8h_source.html">datamanager.h</a>.</p>
+</div><h2 class="groupheader">Dokumentacja funkcji składowych</h2>
+<a id="ac17e0ca2a1fd6e3ed815949b76f49d49" name="ac17e0ca2a1fd6e3ed815949b76f49d49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac17e0ca2a1fd6e3ed815949b76f49d49">&#9670;&#160;</a></span>getDataFilePath()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QString DataManager::getDataFilePath </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>baseFileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Generuje ścieżkę do pliku danych na podstawie nazwy i identyfikatora. </p>
+<p>Tworzy pełną ścieżkę do pliku w katalogu danych aplikacji, uwzględniając nazwę bazową oraz opcjonalny identyfikator. Jeśli katalog nie istnieje, zostanie utworzony.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QString Ścieżka do pliku w formacie JSON.</dd></dl>
+<p>Tworzy pełną ścieżkę do pliku w katalogu danych aplikacji, używając nazwy bazowej i opcjonalnego identyfikatora. Jeśli katalog nie istnieje, tworzy go. Nazwa pliku ma format "&lt;baseFileName&gt;.json" lub "&lt;baseFileName&gt;_&lt;id&gt;.json".</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QString Ścieżka do pliku w formacie JSON. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8cpp_source.html#l00019">19</a> pliku <a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="aedf9b41b7ed88a159ce5190e62662b90" name="aedf9b41b7ed88a159ce5190e62662b90"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedf9b41b7ed88a159ce5190e62662b90">&#9670;&#160;</a></span>loadAllHistoricalData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QVector&lt; QPair&lt; QDateTime, QByteArray &gt; &gt; DataManager::loadAllHistoricalData </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wczytuje wszystkie historyczne dane pomiarów dla danego identyfikatora. </p>
+<p>Wyszukuje pliki z danymi historycznymi dla podanego typu ("measurements") i identyfikatora, wczytuje ich zawartość oraz datę utworzenia na podstawie nazwy pliku. Zwraca wektor par (czas, dane).</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ danych ("measurements"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator czujnika, dla którego wczytywane są dane. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; Wektor par zawierających czas i dane.</dd></dl>
+<p>Wyszukuje pliki z danymi historycznymi dla typu "measurements" i podanego identyfikatora w formacie "&lt;type&gt;_&lt;id&gt;_&lt;timestamp&gt;.json". Wczytuje zawartość każdego pliku i parsuje znacznik czasu z nazwy pliku, zwracając wektor par (czas, dane).</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ danych ("measurements"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator czujnika, dla którego wczytywane są dane. </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; Wektor par zawierających czas i dane. </dd></dl>
+<dl class="section note"><dt>Nota</dt><dd>Funkcja przetwarza tylko pliki zgodne z wzorcem nazwy dla typu "measurements". </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8cpp_source.html#l00121">121</a> pliku <a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="abc87b1ff10d7c63ad9a7c3c952140de7" name="abc87b1ff10d7c63ad9a7c3c952140de7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc87b1ff10d7c63ad9a7c3c952140de7">&#9670;&#160;</a></span>loadDataFromFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QByteArray DataManager::loadDataFromFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>baseFileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Wczytuje dane z pliku JSON. </p>
+<p>Wczytuje zawartość pliku z katalogu danych aplikacji na podstawie nazwy bazowej i opcjonalnego identyfikatora. Zwraca pusty QByteArray, jeśli plik nie istnieje.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QByteArray Zawartość pliku lub pusty QByteArray w przypadku błędu.</dd></dl>
+<p>Otwiera plik w trybie odczytu i zwraca jego zawartość jako QByteArray. Jeśli plik nie istnieje lub nie można go otworzyć, zwraca pusty QByteArray.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Zwraca</dt><dd>QByteArray Zawartość pliku lub pusty QByteArray w przypadku błędu. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8cpp_source.html#l00061">61</a> pliku <a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a682af60b8e4aa6de864f3cf2a28ab993" name="a682af60b8e4aa6de864f3cf2a28ab993"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a682af60b8e4aa6de864f3cf2a28ab993">&#9670;&#160;</a></span>saveDataToFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataManager::saveDataToFile </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>baseFileName</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zapisuje dane do pliku JSON. </p>
+<p>Zapisuje podane dane (QByteArray) do pliku w katalogu danych aplikacji. Ścieżka pliku jest generowana na podstawie nazwy bazowej i opcjonalnego identyfikatora.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">data</td><td>Dane do zapisania w formacie QByteArray. </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Otwiera plik w trybie zapisu i zapisuje podane dane (QByteArray) w katalogu danych aplikacji. Ścieżka pliku jest generowana za pomocą getDataFilePath.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">baseFileName</td><td>Bazowa nazwa pliku (np. "stations"). </td></tr>
+    <tr><td class="paramname">data</td><td>Dane do zapisania w formacie QByteArray. </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (brak identyfikatora w nazwie pliku). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Jeśli plik nie może zostać otwarty, dane nie zostaną zapisane. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8cpp_source.html#l00042">42</a> pliku <a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a>.</p>
+
+</div>
+</div>
+<a id="a2b34a6855d3f5af47793e6bd7db152f3" name="a2b34a6855d3f5af47793e6bd7db152f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b34a6855d3f5af47793e6bd7db152f3">&#9670;&#160;</a></span>saveHistoricalData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void DataManager::saveHistoricalData </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;</td>          <td class="paramname"><span class="paramname"><em>type</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QByteArray &amp;</td>          <td class="paramname"><span class="paramname"><em>data</em></span>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int</td>          <td class="paramname"><span class="paramname"><em>id</em></span><span class="paramdefsep"> = </span><span class="paramdefval">-1</span>&#160;)</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel static">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Zapisuje historyczne dane do pliku JSON. </p>
+<p>Zapisuje dane historyczne (np. pomiary, stacje, czujniki) do pliku w katalogu danych aplikacji. Nazwa pliku zależy od typu danych i zawiera znacznik czasu dla pomiarów.</p>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ danych ("stations", "sensors", "measurements"). </td></tr>
+    <tr><td class="paramname">data</td><td>Dane do zapisania w formacie QByteArray. </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (używany dla czujników i pomiarów).</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Zapisuje dane historyczne do pliku w katalogu danych aplikacji. Nazwa pliku zależy od typu danych:</p><ul>
+<li>Dla "stations": "stations.json".</li>
+<li>Dla "sensors": "&lt;type&gt;_&lt;id&gt;.json".</li>
+<li>Dla "measurements": "&lt;type&gt;_&lt;id&gt;_&lt;timestamp&gt;.json" z bieżącym znacznikiem czasu. Jeśli katalog nie istnieje, tworzy go.</li>
+</ul>
+<dl class="params"><dt>Parametry</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">type</td><td>Typ danych ("stations", "sensors", "measurements"). </td></tr>
+    <tr><td class="paramname">data</td><td>Dane do zapisania w formacie QByteArray. </td></tr>
+    <tr><td class="paramname">id</td><td>Identyfikator, domyślnie -1 (używany dla czujników i pomiarów). </td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section note"><dt>Nota</dt><dd>Jeśli plik nie może zostać otwarty, dane nie zostaną zapisane. </dd></dl>
+
+<p class="definition">Definicja w linii <a class="el" href="datamanager_8cpp_source.html#l00086">86</a> pliku <a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a>.</p>
+
+</div>
+</div>
+<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li><a class="el" href="datamanager_8h_source.html">datamanager.h</a></li>
+<li><a class="el" href="datamanager_8cpp_source.html">datamanager.cpp</a></li>
+</ul>
+</div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="class_data_manager.html">DataManager</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

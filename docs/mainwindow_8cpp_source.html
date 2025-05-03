@@ -1,0 +1,493 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Plik źródłowy mainwindow.cpp</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('mainwindow_8cpp_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">mainwindow.cpp</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="mainwindow_8cpp.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor">#include &quot;<a class="code" href="mainwindow_8h.html">mainwindow.h</a>&quot;</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor">#include &quot;ui_mainwindow.h&quot;</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span><span class="preprocessor">#include &quot;<a class="code" href="apiclient_8h.html">apiclient.h</a>&quot;</span></div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor">#include &quot;<a class="code" href="connectionmanager_8h.html">connectionmanager.h</a>&quot;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor">#include &quot;<a class="code" href="stationhandler_8h.html">stationhandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor">#include &quot;<a class="code" href="sensorhandler_8h.html">sensorhandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span><span class="preprocessor">#include &quot;<a class="code" href="measurementhandler_8h.html">measurementhandler.h</a>&quot;</span></div>
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span><span class="preprocessor">#include &quot;<a class="code" href="datamanager_8h.html">datamanager.h</a>&quot;</span></div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span></div>
+<div class="foldopen" id="foldopen00026" data-start="{" data-end="}">
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno"><a class="line" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">   26</a></span><a class="code hl_function" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a>(QWidget *parent)</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    : QMainWindow(parent)</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    , <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>(new <a class="code hl_namespace" href="namespace_ui.html">Ui</a>::<a class="code hl_function" href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>)</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span>    , <a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>(new <a class="code hl_class" href="class_api_client.html">ApiClient</a>())</div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    , <a class="code hl_variable" href="class_main_window.html#a81538338b37a2b54dc8eccabc06b0311">connectionManager</a>(new <a class="code hl_class" href="class_connection_manager.html">ConnectionManager</a>(this))</div>
+<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    , <a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a>(-1)</div>
+<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    , <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>(-1)</div>
+<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>{</div>
+<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;setupUi(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span>    this-&gt;setWindowTitle(<span class="stringliteral">&quot;Made by Miłosz Kurpisz&quot;</span>);</div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>    this-&gt;setWindowIcon(QIcon(<span class="stringliteral">&quot;:/icons/icon.ico&quot;</span>));</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span> </div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;Main UI - thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00039" name="l00039"></a><span class="lineno">   39</span> </div>
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno">   40</span>    <a class="code hl_variable" href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">isOffline</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    <a class="code hl_variable" href="class_main_window.html#a81538338b37a2b54dc8eccabc06b0311">connectionManager</a>-&gt;checkConnectionAndReloadStations(<a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStationCount, <a class="code hl_variable" href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">isOffline</a>, <a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>);;</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span> </div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>    connect(<a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>, &amp;<a class="code hl_signal" href="class_api_client.html#a9ad38f6b6114fa1a255b2196678fb526">ApiClient::dataReady</a>, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">MainWindow::onDataReady</a>);</div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    connect(<a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>, &amp;<a class="code hl_signal" href="class_api_client.html#a1cdd7f66fc698e1625b247b19a07ce03">ApiClient::errorOccurred</a>, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_main_window.html#a3e16e6d5bd4c0ce543bb06e54b712f3b">MainWindow::onErrorOccurred</a>);</div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>    <a class="code hl_variable" href="class_main_window.html#aad6f9bd9ec6a87df435860ff60dfaa72">clockTimer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span>    connect(<a class="code hl_variable" href="class_main_window.html#aad6f9bd9ec6a87df435860ff60dfaa72">clockTimer</a>, &amp;QTimer::timeout, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_main_window.html#ad4fc92c22319293947d2ab70f97e765b">MainWindow::updateClock</a>);</div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span>    <a class="code hl_variable" href="class_main_window.html#aad6f9bd9ec6a87df435860ff60dfaa72">clockTimer</a>-&gt;start(100);</div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span> </div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span>    <a class="code hl_variable" href="class_main_window.html#aad978701da4e3fa0935af53d81b4acab">connectionCheckTimer</a> = <span class="keyword">new</span> QTimer(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00051" name="l00051"></a><span class="lineno">   51</span>    connect(<a class="code hl_variable" href="class_main_window.html#aad978701da4e3fa0935af53d81b4acab">connectionCheckTimer</a>, &amp;QTimer::timeout, [=]() {</div>
+<div class="line"><a id="l00052" name="l00052"></a><span class="lineno">   52</span>        <a class="code hl_variable" href="class_main_window.html#a81538338b37a2b54dc8eccabc06b0311">connectionManager</a>-&gt;checkConnectionAndReloadStations(<a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStationCount, <a class="code hl_variable" href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">isOffline</a>, <a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>);</div>
+<div class="line"><a id="l00053" name="l00053"></a><span class="lineno">   53</span>    });</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno">   54</span>    <a class="code hl_variable" href="class_main_window.html#aad978701da4e3fa0935af53d81b4acab">connectionCheckTimer</a>-&gt;start(10000);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span>    connect(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationSearch, &amp;QLineEdit::textChanged, [=](<span class="keyword">const</span> QString &amp;text) {</div>
+<div class="line"><a id="l00057" name="l00057"></a><span class="lineno">   57</span>        StationHandler::updateStationList(text, ui-&gt;stationList, ui-&gt;lblStationCount, allStations);</div>
+<div class="line"><a id="l00058" name="l00058"></a><span class="lineno">   58</span>    });</div>
+<div class="line"><a id="l00059" name="l00059"></a><span class="lineno">   59</span>    connect(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory, &amp;QPushButton::clicked, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">MainWindow::on_btnHistory_clicked</a>);</div>
+<div class="line"><a id="l00060" name="l00060"></a><span class="lineno">   60</span>    connect(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days, &amp;QPushButton::clicked, [<span class="keyword">this</span>]() { loadHistoricalData(7); });</div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno">   61</span>    connect(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days, &amp;QPushButton::clicked, [<span class="keyword">this</span>]() { loadHistoricalData(14); });</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationSearch, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList);</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno">   64</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList);</div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno">   65</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days);</div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days);</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory);</div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span>    setTabOrder(<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationSearch);</div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats-&gt;setFocusPolicy(Qt::NoFocus);</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView-&gt;setFocusPolicy(Qt::NoFocus);</div>
+<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblTime-&gt;setFocusPolicy(Qt::NoFocus);</div>
+<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationSearch-&gt;setFocus();</div>
+<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days-&gt;installEventFilter(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days-&gt;installEventFilter(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory-&gt;installEventFilter(<span class="keyword">this</span>);</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a> = <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView-&gt;setRenderHint(QPainter::Antialiasing);</div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>}</div>
+</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span></div>
+<div class="foldopen" id="foldopen00085" data-start="{" data-end="}">
+<div class="line"><a id="l00085" name="l00085"></a><span class="lineno"><a class="line" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">   85</a></span><a class="code hl_function" href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a>() {</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="keyword">delete</span> <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>;</div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
+</div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span></div>
+<div class="foldopen" id="foldopen00098" data-start="{" data-end="}">
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno"><a class="line" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">   98</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">MainWindow::onDataReady</a>(<span class="keyword">const</span> QString &amp;data) {</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span>    QJsonDocument doc = QJsonDocument::fromJson(data.toUtf8());</div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span>    <span class="keywordflow">if</span> (doc.isArray()) {</div>
+<div class="line"><a id="l00101" name="l00101"></a><span class="lineno">  101</span>        QJsonArray array = doc.array();</div>
+<div class="line"><a id="l00102" name="l00102"></a><span class="lineno">  102</span>        <span class="keywordflow">if</span> (!array.isEmpty() &amp;&amp; array.first().toObject().contains(<span class="stringliteral">&quot;stationName&quot;</span>)) {</div>
+<div class="line"><a id="l00103" name="l00103"></a><span class="lineno">  103</span>            <a class="code hl_function" href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">DataManager::saveHistoricalData</a>(<span class="stringliteral">&quot;stations&quot;</span>, data.toUtf8());</div>
+<div class="line"><a id="l00104" name="l00104"></a><span class="lineno">  104</span>            <a class="code hl_function" href="class_station_handler.html#ac3f14b21a8554f54a68b76cef4508e40">StationHandler::handleStationsData</a>(array, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStationCount, <a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>);</div>
+<div class="line"><a id="l00105" name="l00105"></a><span class="lineno">  105</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00106" name="l00106"></a><span class="lineno">  106</span>            <a class="code hl_function" href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">DataManager::saveHistoricalData</a>(<span class="stringliteral">&quot;sensors&quot;</span>, data.toUtf8(), <a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a>);</div>
+<div class="line"><a id="l00107" name="l00107"></a><span class="lineno">  107</span>            <a class="code hl_function" href="class_sensor_handler.html#a12af22d7a2df5d49e5591401737d9d3d">SensorHandler::handleSensorsData</a>(array, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList, <a class="code hl_variable" href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">currentSensors</a>);</div>
+<div class="line"><a id="l00108" name="l00108"></a><span class="lineno">  108</span>        }</div>
+<div class="line"><a id="l00109" name="l00109"></a><span class="lineno">  109</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (doc.isObject()) {</div>
+<div class="line"><a id="l00110" name="l00110"></a><span class="lineno">  110</span>        <a class="code hl_function" href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">DataManager::saveHistoricalData</a>(<span class="stringliteral">&quot;measurements&quot;</span>, data.toUtf8(), <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>);</div>
+<div class="line"><a id="l00111" name="l00111"></a><span class="lineno">  111</span> </div>
+<div class="line"><a id="l00112" name="l00112"></a><span class="lineno">  112</span>        QJsonObject obj = doc.object();</div>
+<div class="line"><a id="l00113" name="l00113"></a><span class="lineno">  113</span>        QVector&lt;QPair&lt;QDateTime, double&gt;&gt; measurements;</div>
+<div class="line"><a id="l00114" name="l00114"></a><span class="lineno">  114</span>        QJsonArray values = obj[<span class="stringliteral">&quot;values&quot;</span>].toArray();</div>
+<div class="line"><a id="l00115" name="l00115"></a><span class="lineno">  115</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> QJsonValue &amp;val : values) {</div>
+<div class="line"><a id="l00116" name="l00116"></a><span class="lineno">  116</span>            QJsonObject entry = val.toObject();</div>
+<div class="line"><a id="l00117" name="l00117"></a><span class="lineno">  117</span>            QDateTime date = QDateTime::fromString(entry[<span class="stringliteral">&quot;date&quot;</span>].toString(), Qt::ISODate);</div>
+<div class="line"><a id="l00118" name="l00118"></a><span class="lineno">  118</span>            <span class="keywordtype">double</span> value = entry[<span class="stringliteral">&quot;value&quot;</span>].toDouble(-1.0);</div>
+<div class="line"><a id="l00119" name="l00119"></a><span class="lineno">  119</span>            <span class="keywordflow">if</span> (value &gt;= 0 &amp;&amp; date.isValid()) {</div>
+<div class="line"><a id="l00120" name="l00120"></a><span class="lineno">  120</span>                measurements.append({date, value});</div>
+<div class="line"><a id="l00121" name="l00121"></a><span class="lineno">  121</span>            }</div>
+<div class="line"><a id="l00122" name="l00122"></a><span class="lineno">  122</span>        }</div>
+<div class="line"><a id="l00123" name="l00123"></a><span class="lineno">  123</span>        <span class="keywordflow">if</span> (!measurements.isEmpty()) {</div>
+<div class="line"><a id="l00124" name="l00124"></a><span class="lineno">  124</span>            <a class="code hl_function" href="class_measurement_handler.html#a08a948828e5d248c12954c4f29ea32eb">MeasurementHandler::handleMeasurementsData</a>(obj, measurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats);</div>
+<div class="line"><a id="l00125" name="l00125"></a><span class="lineno">  125</span>            <a class="code hl_function" href="class_measurement_handler.html#ab944b9d0b1ca1a7a8fc2a8133237dd52">MeasurementHandler::updateChart</a>(measurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView, <a class="code hl_variable" href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">currentStationCity</a>, <a class="code hl_variable" href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">currentStationAddress</a>, <a class="code hl_variable" href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">currentParamName</a>);</div>
+<div class="line"><a id="l00126" name="l00126"></a><span class="lineno">  126</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus-&gt;setText(<span class="stringliteral">&quot;Wczytano dane online&quot;</span>);</div>
+<div class="line"><a id="l00127" name="l00127"></a><span class="lineno">  127</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus-&gt;setStyleSheet(<span class="stringliteral">&quot;color: green;&quot;</span>);</div>
+<div class="line"><a id="l00128" name="l00128"></a><span class="lineno">  128</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00129" name="l00129"></a><span class="lineno">  129</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus-&gt;setText(<span class="stringliteral">&quot;Błąd danych online&quot;</span>);</div>
+<div class="line"><a id="l00130" name="l00130"></a><span class="lineno">  130</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStatus-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00131" name="l00131"></a><span class="lineno">  131</span>        }</div>
+<div class="line"><a id="l00132" name="l00132"></a><span class="lineno">  132</span>    }</div>
+<div class="line"><a id="l00133" name="l00133"></a><span class="lineno">  133</span>}</div>
+</div>
+<div class="line"><a id="l00134" name="l00134"></a><span class="lineno">  134</span></div>
+<div class="foldopen" id="foldopen00143" data-start="{" data-end="}">
+<div class="line"><a id="l00143" name="l00143"></a><span class="lineno"><a class="line" href="class_main_window.html#a3e16e6d5bd4c0ce543bb06e54b712f3b">  143</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a3e16e6d5bd4c0ce543bb06e54b712f3b">MainWindow::onErrorOccurred</a>(<span class="keyword">const</span> QString &amp;error) {</div>
+<div class="line"><a id="l00144" name="l00144"></a><span class="lineno">  144</span>    <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Błąd: &quot;</span> + error);</div>
+<div class="line"><a id="l00145" name="l00145"></a><span class="lineno">  145</span>    <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00146" name="l00146"></a><span class="lineno">  146</span> </div>
+<div class="line"><a id="l00147" name="l00147"></a><span class="lineno">  147</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a> != -1) {</div>
+<div class="line"><a id="l00148" name="l00148"></a><span class="lineno">  148</span>        <a class="code hl_slot" href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">on_btnHistory_clicked</a>();</div>
+<div class="line"><a id="l00149" name="l00149"></a><span class="lineno">  149</span>    } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a> != -1) {</div>
+<div class="line"><a id="l00150" name="l00150"></a><span class="lineno">  150</span>        QByteArray sensorsData = <a class="code hl_function" href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a>(<span class="stringliteral">&quot;sensors&quot;</span>, <a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a>);</div>
+<div class="line"><a id="l00151" name="l00151"></a><span class="lineno">  151</span>        <span class="keywordflow">if</span> (!sensorsData.isEmpty()) {</div>
+<div class="line"><a id="l00152" name="l00152"></a><span class="lineno">  152</span>            <a class="code hl_slot" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">onDataReady</a>(QString::fromUtf8(sensorsData));</div>
+<div class="line"><a id="l00153" name="l00153"></a><span class="lineno">  153</span>        }</div>
+<div class="line"><a id="l00154" name="l00154"></a><span class="lineno">  154</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00155" name="l00155"></a><span class="lineno">  155</span>        QByteArray stationsData = <a class="code hl_function" href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a>(<span class="stringliteral">&quot;stations&quot;</span>);</div>
+<div class="line"><a id="l00156" name="l00156"></a><span class="lineno">  156</span>        <span class="keywordflow">if</span> (!stationsData.isEmpty()) {</div>
+<div class="line"><a id="l00157" name="l00157"></a><span class="lineno">  157</span>            <a class="code hl_slot" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">onDataReady</a>(QString::fromUtf8(stationsData));</div>
+<div class="line"><a id="l00158" name="l00158"></a><span class="lineno">  158</span>        }</div>
+<div class="line"><a id="l00159" name="l00159"></a><span class="lineno">  159</span>    }</div>
+<div class="line"><a id="l00160" name="l00160"></a><span class="lineno">  160</span>}</div>
+</div>
+<div class="line"><a id="l00161" name="l00161"></a><span class="lineno">  161</span></div>
+<div class="foldopen" id="foldopen00171" data-start="{" data-end="}">
+<div class="line"><a id="l00171" name="l00171"></a><span class="lineno"><a class="line" href="class_main_window.html#a84bc15082aa609abef5a9cd5046e29e9">  171</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a84bc15082aa609abef5a9cd5046e29e9">MainWindow::on_stationList_itemClicked</a>(QListWidgetItem *item) {</div>
+<div class="line"><a id="l00172" name="l00172"></a><span class="lineno">  172</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats-&gt;clear();</div>
+<div class="line"><a id="l00173" name="l00173"></a><span class="lineno">  173</span>    <a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a> = item-&gt;data(Qt::UserRole).toInt();</div>
+<div class="line"><a id="l00174" name="l00174"></a><span class="lineno">  174</span> </div>
+<div class="line"><a id="l00175" name="l00175"></a><span class="lineno">  175</span>    <span class="keyword">auto</span> stationData = std::find_if(<a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>.begin(), <a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>.end(),</div>
+<div class="line"><a id="l00176" name="l00176"></a><span class="lineno">  176</span>                                    [<span class="keyword">this</span>](<span class="keyword">const</span> QPair&lt;QString, QJsonObject&gt;&amp; pair) {</div>
+<div class="line"><a id="l00177" name="l00177"></a><span class="lineno">  177</span>                                        return pair.second[<span class="stringliteral">&quot;id&quot;</span>].toInt() == currentStationId;</div>
+<div class="line"><a id="l00178" name="l00178"></a><span class="lineno">  178</span>                                    });</div>
+<div class="line"><a id="l00179" name="l00179"></a><span class="lineno">  179</span> </div>
+<div class="line"><a id="l00180" name="l00180"></a><span class="lineno">  180</span>    <span class="keywordflow">if</span> (stationData != <a class="code hl_variable" href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">allStations</a>.end()) {</div>
+<div class="line"><a id="l00181" name="l00181"></a><span class="lineno">  181</span>        <a class="code hl_variable" href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">currentStationCity</a> = stationData-&gt;second[<span class="stringliteral">&quot;city&quot;</span>].toObject()[<span class="stringliteral">&quot;name&quot;</span>].toString();</div>
+<div class="line"><a id="l00182" name="l00182"></a><span class="lineno">  182</span>        <a class="code hl_variable" href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">currentStationAddress</a> = stationData-&gt;second[<span class="stringliteral">&quot;addressStreet&quot;</span>].toString();</div>
+<div class="line"><a id="l00183" name="l00183"></a><span class="lineno">  183</span>    }</div>
+<div class="line"><a id="l00184" name="l00184"></a><span class="lineno">  184</span> </div>
+<div class="line"><a id="l00185" name="l00185"></a><span class="lineno">  185</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">isOffline</a>) {</div>
+<div class="line"><a id="l00186" name="l00186"></a><span class="lineno">  186</span>        QByteArray sensorsData = <a class="code hl_function" href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a>(<span class="stringliteral">&quot;sensors&quot;</span>, <a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a>);</div>
+<div class="line"><a id="l00187" name="l00187"></a><span class="lineno">  187</span>        <span class="keywordflow">if</span> (sensorsData.isEmpty()) {</div>
+<div class="line"><a id="l00188" name="l00188"></a><span class="lineno">  188</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Brak danych historycznych&quot;</span>);</div>
+<div class="line"><a id="l00189" name="l00189"></a><span class="lineno">  189</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00190" name="l00190"></a><span class="lineno">  190</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList-&gt;clear();</div>
+<div class="line"><a id="l00191" name="l00191"></a><span class="lineno">  191</span>            <a class="code hl_variable" href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">currentSensors</a>.clear();</div>
+<div class="line"><a id="l00192" name="l00192"></a><span class="lineno">  192</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00193" name="l00193"></a><span class="lineno">  193</span>        }</div>
+<div class="line"><a id="l00194" name="l00194"></a><span class="lineno">  194</span>        QJsonDocument doc = QJsonDocument::fromJson(sensorsData);</div>
+<div class="line"><a id="l00195" name="l00195"></a><span class="lineno">  195</span>        <span class="keywordflow">if</span> (doc.isArray()) {</div>
+<div class="line"><a id="l00196" name="l00196"></a><span class="lineno">  196</span>            <a class="code hl_slot" href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">onDataReady</a>(QString::fromUtf8(sensorsData));</div>
+<div class="line"><a id="l00197" name="l00197"></a><span class="lineno">  197</span>        }</div>
+<div class="line"><a id="l00198" name="l00198"></a><span class="lineno">  198</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00199" name="l00199"></a><span class="lineno">  199</span>        <a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>-&gt;fetchData(QUrl(QString(<span class="stringliteral">&quot;https://api.gios.gov.pl/pjp-api/rest/station/sensors/%1&quot;</span>)</div>
+<div class="line"><a id="l00200" name="l00200"></a><span class="lineno">  200</span>                                      .arg(<a class="code hl_variable" href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">currentStationId</a>)));</div>
+<div class="line"><a id="l00201" name="l00201"></a><span class="lineno">  201</span>    }</div>
+<div class="line"><a id="l00202" name="l00202"></a><span class="lineno">  202</span>}</div>
+</div>
+<div class="line"><a id="l00203" name="l00203"></a><span class="lineno">  203</span></div>
+<div class="foldopen" id="foldopen00213" data-start="{" data-end="}">
+<div class="line"><a id="l00213" name="l00213"></a><span class="lineno"><a class="line" href="class_main_window.html#ababdb9a889454b66306e4a3b2106434e">  213</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#ababdb9a889454b66306e4a3b2106434e">MainWindow::on_sensorList_itemClicked</a>(QListWidgetItem *item) {</div>
+<div class="line"><a id="l00214" name="l00214"></a><span class="lineno">  214</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats-&gt;clear();</div>
+<div class="line"><a id="l00215" name="l00215"></a><span class="lineno">  215</span>    <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a> = item-&gt;data(Qt::UserRole).toInt();</div>
+<div class="line"><a id="l00216" name="l00216"></a><span class="lineno">  216</span> </div>
+<div class="line"><a id="l00217" name="l00217"></a><span class="lineno">  217</span>    <span class="keyword">auto</span> sensorData = std::find_if(<a class="code hl_variable" href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">currentSensors</a>.begin(), <a class="code hl_variable" href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">currentSensors</a>.end(),</div>
+<div class="line"><a id="l00218" name="l00218"></a><span class="lineno">  218</span>                                   [<span class="keyword">this</span>](<span class="keyword">const</span> QPair&lt;int, QString&gt;&amp; pair) {</div>
+<div class="line"><a id="l00219" name="l00219"></a><span class="lineno">  219</span>                                       return pair.first == currentSensorId;</div>
+<div class="line"><a id="l00220" name="l00220"></a><span class="lineno">  220</span>                                   });</div>
+<div class="line"><a id="l00221" name="l00221"></a><span class="lineno">  221</span> </div>
+<div class="line"><a id="l00222" name="l00222"></a><span class="lineno">  222</span>    <span class="keywordflow">if</span> (sensorData != <a class="code hl_variable" href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">currentSensors</a>.end()) {</div>
+<div class="line"><a id="l00223" name="l00223"></a><span class="lineno">  223</span>        <a class="code hl_variable" href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">currentParamName</a> = sensorData-&gt;second;</div>
+<div class="line"><a id="l00224" name="l00224"></a><span class="lineno">  224</span>    }</div>
+<div class="line"><a id="l00225" name="l00225"></a><span class="lineno">  225</span> </div>
+<div class="line"><a id="l00226" name="l00226"></a><span class="lineno">  226</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">isOffline</a>) {</div>
+<div class="line"><a id="l00227" name="l00227"></a><span class="lineno">  227</span>        QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; allData = <a class="code hl_function" href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a>(<span class="stringliteral">&quot;measurements&quot;</span>, <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>);</div>
+<div class="line"><a id="l00228" name="l00228"></a><span class="lineno">  228</span>        <span class="keywordflow">if</span> (allData.isEmpty()) {</div>
+<div class="line"><a id="l00229" name="l00229"></a><span class="lineno">  229</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Brak danych historycznych&quot;</span>);</div>
+<div class="line"><a id="l00230" name="l00230"></a><span class="lineno">  230</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00231" name="l00231"></a><span class="lineno">  231</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00232" name="l00232"></a><span class="lineno">  232</span>        }</div>
+<div class="line"><a id="l00233" name="l00233"></a><span class="lineno">  233</span> </div>
+<div class="line"><a id="l00234" name="l00234"></a><span class="lineno">  234</span>        QMap&lt;QDateTime, double&gt; aggregatedData;</div>
+<div class="line"><a id="l00235" name="l00235"></a><span class="lineno">  235</span>        <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;dataPair : allData) {</div>
+<div class="line"><a id="l00236" name="l00236"></a><span class="lineno">  236</span>            QJsonDocument doc = QJsonDocument::fromJson(dataPair.second);</div>
+<div class="line"><a id="l00237" name="l00237"></a><span class="lineno">  237</span>            <span class="keywordflow">if</span> (doc.isObject()) {</div>
+<div class="line"><a id="l00238" name="l00238"></a><span class="lineno">  238</span>                QJsonArray values = doc.object()[<span class="stringliteral">&quot;values&quot;</span>].toArray();</div>
+<div class="line"><a id="l00239" name="l00239"></a><span class="lineno">  239</span>                <span class="keywordflow">for</span> (<span class="keyword">const</span> QJsonValue &amp;val : values) {</div>
+<div class="line"><a id="l00240" name="l00240"></a><span class="lineno">  240</span>                    QJsonObject entry = val.toObject();</div>
+<div class="line"><a id="l00241" name="l00241"></a><span class="lineno">  241</span>                    QDateTime date = QDateTime::fromString(entry[<span class="stringliteral">&quot;date&quot;</span>].toString(), Qt::ISODate);</div>
+<div class="line"><a id="l00242" name="l00242"></a><span class="lineno">  242</span>                    <span class="keywordtype">double</span> value = entry[<span class="stringliteral">&quot;value&quot;</span>].toDouble(-1.0);</div>
+<div class="line"><a id="l00243" name="l00243"></a><span class="lineno">  243</span>                    <span class="keywordflow">if</span> (value &gt;= 0) {</div>
+<div class="line"><a id="l00244" name="l00244"></a><span class="lineno">  244</span>                        aggregatedData.insert(date, value);</div>
+<div class="line"><a id="l00245" name="l00245"></a><span class="lineno">  245</span>                    }</div>
+<div class="line"><a id="l00246" name="l00246"></a><span class="lineno">  246</span>                }</div>
+<div class="line"><a id="l00247" name="l00247"></a><span class="lineno">  247</span>            }</div>
+<div class="line"><a id="l00248" name="l00248"></a><span class="lineno">  248</span>        }</div>
+<div class="line"><a id="l00249" name="l00249"></a><span class="lineno">  249</span> </div>
+<div class="line"><a id="l00250" name="l00250"></a><span class="lineno">  250</span>        <span class="keywordflow">if</span> (aggregatedData.isEmpty()) {</div>
+<div class="line"><a id="l00251" name="l00251"></a><span class="lineno">  251</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Błędne dane lokalne&quot;</span>);</div>
+<div class="line"><a id="l00252" name="l00252"></a><span class="lineno">  252</span>            <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00253" name="l00253"></a><span class="lineno">  253</span>            <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00254" name="l00254"></a><span class="lineno">  254</span>        }</div>
+<div class="line"><a id="l00255" name="l00255"></a><span class="lineno">  255</span> </div>
+<div class="line"><a id="l00256" name="l00256"></a><span class="lineno">  256</span>        QVector&lt;QPair&lt;QDateTime, double&gt;&gt; measurements;</div>
+<div class="line"><a id="l00257" name="l00257"></a><span class="lineno">  257</span>        <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = aggregatedData.begin(); it != aggregatedData.end(); ++it) {</div>
+<div class="line"><a id="l00258" name="l00258"></a><span class="lineno">  258</span>            measurements.append(qMakePair(it.key(), it.value()));</div>
+<div class="line"><a id="l00259" name="l00259"></a><span class="lineno">  259</span>        }</div>
+<div class="line"><a id="l00260" name="l00260"></a><span class="lineno">  260</span> </div>
+<div class="line"><a id="l00261" name="l00261"></a><span class="lineno">  261</span>        <a class="code hl_function" href="class_measurement_handler.html#a08a948828e5d248c12954c4f29ea32eb">MeasurementHandler::handleMeasurementsData</a>(QJsonObject(), measurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats);</div>
+<div class="line"><a id="l00262" name="l00262"></a><span class="lineno">  262</span>        <a class="code hl_function" href="class_measurement_handler.html#ab944b9d0b1ca1a7a8fc2a8133237dd52">MeasurementHandler::updateChart</a>(measurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView, <a class="code hl_variable" href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">currentStationCity</a>, <a class="code hl_variable" href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">currentStationAddress</a>, <a class="code hl_variable" href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">currentParamName</a>);</div>
+<div class="line"><a id="l00263" name="l00263"></a><span class="lineno">  263</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00264" name="l00264"></a><span class="lineno">  264</span>        <a class="code hl_variable" href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">apiClient</a>-&gt;fetchSensorData(<a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>);</div>
+<div class="line"><a id="l00265" name="l00265"></a><span class="lineno">  265</span>    }</div>
+<div class="line"><a id="l00266" name="l00266"></a><span class="lineno">  266</span>}</div>
+</div>
+<div class="line"><a id="l00267" name="l00267"></a><span class="lineno">  267</span></div>
+<div class="foldopen" id="foldopen00275" data-start="{" data-end="}">
+<div class="line"><a id="l00275" name="l00275"></a><span class="lineno"><a class="line" href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">  275</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">MainWindow::on_btnHistory_clicked</a>() {</div>
+<div class="line"><a id="l00276" name="l00276"></a><span class="lineno">  276</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a> == -1) {</div>
+<div class="line"><a id="l00277" name="l00277"></a><span class="lineno">  277</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Proszę wybrać stację oraz czujnik&quot;</span>);</div>
+<div class="line"><a id="l00278" name="l00278"></a><span class="lineno">  278</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: orange;&quot;</span>);</div>
+<div class="line"><a id="l00279" name="l00279"></a><span class="lineno">  279</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00280" name="l00280"></a><span class="lineno">  280</span>    }</div>
+<div class="line"><a id="l00281" name="l00281"></a><span class="lineno">  281</span> </div>
+<div class="line"><a id="l00282" name="l00282"></a><span class="lineno">  282</span>    QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; allData = <a class="code hl_function" href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a>(<span class="stringliteral">&quot;measurements&quot;</span>, <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>);</div>
+<div class="line"><a id="l00283" name="l00283"></a><span class="lineno">  283</span>    QMap&lt;QDateTime, double&gt; aggregatedData;</div>
+<div class="line"><a id="l00284" name="l00284"></a><span class="lineno">  284</span> </div>
+<div class="line"><a id="l00285" name="l00285"></a><span class="lineno">  285</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;dataPair : allData) {</div>
+<div class="line"><a id="l00286" name="l00286"></a><span class="lineno">  286</span>        QJsonDocument doc = QJsonDocument::fromJson(dataPair.second);</div>
+<div class="line"><a id="l00287" name="l00287"></a><span class="lineno">  287</span>        <span class="keywordflow">if</span> (doc.isObject()) {</div>
+<div class="line"><a id="l00288" name="l00288"></a><span class="lineno">  288</span>            QJsonArray values = doc.object()[<span class="stringliteral">&quot;values&quot;</span>].toArray();</div>
+<div class="line"><a id="l00289" name="l00289"></a><span class="lineno">  289</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> QJsonValue &amp;val : values) {</div>
+<div class="line"><a id="l00290" name="l00290"></a><span class="lineno">  290</span>                QJsonObject entry = val.toObject();</div>
+<div class="line"><a id="l00291" name="l00291"></a><span class="lineno">  291</span>                QDateTime date = QDateTime::fromString(entry[<span class="stringliteral">&quot;date&quot;</span>].toString(), Qt::ISODate);</div>
+<div class="line"><a id="l00292" name="l00292"></a><span class="lineno">  292</span>                <span class="keywordtype">double</span> value = entry[<span class="stringliteral">&quot;value&quot;</span>].toDouble(-1.0);</div>
+<div class="line"><a id="l00293" name="l00293"></a><span class="lineno">  293</span>                <span class="keywordflow">if</span> (value &gt;= 0 &amp;&amp; date.isValid()) {</div>
+<div class="line"><a id="l00294" name="l00294"></a><span class="lineno">  294</span>                    aggregatedData.insert(date, value);</div>
+<div class="line"><a id="l00295" name="l00295"></a><span class="lineno">  295</span>                }</div>
+<div class="line"><a id="l00296" name="l00296"></a><span class="lineno">  296</span>            }</div>
+<div class="line"><a id="l00297" name="l00297"></a><span class="lineno">  297</span>        }</div>
+<div class="line"><a id="l00298" name="l00298"></a><span class="lineno">  298</span>    }</div>
+<div class="line"><a id="l00299" name="l00299"></a><span class="lineno">  299</span> </div>
+<div class="line"><a id="l00300" name="l00300"></a><span class="lineno">  300</span>    QVector&lt;QPair&lt;QDateTime, double&gt;&gt; allMeasurements;</div>
+<div class="line"><a id="l00301" name="l00301"></a><span class="lineno">  301</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = aggregatedData.constBegin(); it != aggregatedData.constEnd(); ++it) {</div>
+<div class="line"><a id="l00302" name="l00302"></a><span class="lineno">  302</span>        allMeasurements.append(qMakePair(it.key(), it.value()));</div>
+<div class="line"><a id="l00303" name="l00303"></a><span class="lineno">  303</span>    }</div>
+<div class="line"><a id="l00304" name="l00304"></a><span class="lineno">  304</span> </div>
+<div class="line"><a id="l00305" name="l00305"></a><span class="lineno">  305</span>    std::sort(allMeasurements.begin(), allMeasurements.end(),</div>
+<div class="line"><a id="l00306" name="l00306"></a><span class="lineno">  306</span>              [](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;a, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;b) { return a.first &lt; b.first; });</div>
+<div class="line"><a id="l00307" name="l00307"></a><span class="lineno">  307</span> </div>
+<div class="line"><a id="l00308" name="l00308"></a><span class="lineno">  308</span>    <span class="keywordflow">if</span> (!allMeasurements.isEmpty()) {</div>
+<div class="line"><a id="l00309" name="l00309"></a><span class="lineno">  309</span>        <a class="code hl_function" href="class_measurement_handler.html#a08a948828e5d248c12954c4f29ea32eb">MeasurementHandler::handleMeasurementsData</a>(QJsonObject(), allMeasurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats);</div>
+<div class="line"><a id="l00310" name="l00310"></a><span class="lineno">  310</span>        <a class="code hl_function" href="class_measurement_handler.html#ab944b9d0b1ca1a7a8fc2a8133237dd52">MeasurementHandler::updateChart</a>(allMeasurements, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView, <a class="code hl_variable" href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">currentStationCity</a>, <a class="code hl_variable" href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">currentStationAddress</a>, <a class="code hl_variable" href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">currentParamName</a>);</div>
+<div class="line"><a id="l00311" name="l00311"></a><span class="lineno">  311</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Wczytano wszystkie dane historyczne&quot;</span>);</div>
+<div class="line"><a id="l00312" name="l00312"></a><span class="lineno">  312</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: orange;&quot;</span>);</div>
+<div class="line"><a id="l00313" name="l00313"></a><span class="lineno">  313</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00314" name="l00314"></a><span class="lineno">  314</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Brak danych historycznych&quot;</span>);</div>
+<div class="line"><a id="l00315" name="l00315"></a><span class="lineno">  315</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00316" name="l00316"></a><span class="lineno">  316</span>    }</div>
+<div class="line"><a id="l00317" name="l00317"></a><span class="lineno">  317</span>}</div>
+</div>
+<div class="line"><a id="l00318" name="l00318"></a><span class="lineno">  318</span></div>
+<div class="foldopen" id="foldopen00328" data-start="{" data-end="}">
+<div class="line"><a id="l00328" name="l00328"></a><span class="lineno"><a class="line" href="class_main_window.html#a942d10435960a8debad382b4ae3e4092">  328</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#a942d10435960a8debad382b4ae3e4092">MainWindow::loadHistoricalData</a>(<span class="keywordtype">int</span> days) {</div>
+<div class="line"><a id="l00329" name="l00329"></a><span class="lineno">  329</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a> == -1) {</div>
+<div class="line"><a id="l00330" name="l00330"></a><span class="lineno">  330</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(<span class="stringliteral">&quot;Proszę wybrać stację oraz czujnik&quot;</span>);</div>
+<div class="line"><a id="l00331" name="l00331"></a><span class="lineno">  331</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: orange;&quot;</span>);</div>
+<div class="line"><a id="l00332" name="l00332"></a><span class="lineno">  332</span>        <span class="keywordflow">return</span>;</div>
+<div class="line"><a id="l00333" name="l00333"></a><span class="lineno">  333</span>    }</div>
+<div class="line"><a id="l00334" name="l00334"></a><span class="lineno">  334</span> </div>
+<div class="line"><a id="l00335" name="l00335"></a><span class="lineno">  335</span>    QVector&lt;QPair&lt;QDateTime, QByteArray&gt;&gt; allData = <a class="code hl_function" href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a>(<span class="stringliteral">&quot;measurements&quot;</span>, <a class="code hl_variable" href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">currentSensorId</a>);</div>
+<div class="line"><a id="l00336" name="l00336"></a><span class="lineno">  336</span>    QMap&lt;QDateTime, double&gt; aggregatedData;</div>
+<div class="line"><a id="l00337" name="l00337"></a><span class="lineno">  337</span> </div>
+<div class="line"><a id="l00338" name="l00338"></a><span class="lineno">  338</span>    QDateTime cutoffDate = QDateTime::currentDateTime().addDays(-days);</div>
+<div class="line"><a id="l00339" name="l00339"></a><span class="lineno">  339</span> </div>
+<div class="line"><a id="l00340" name="l00340"></a><span class="lineno">  340</span>    <span class="keywordflow">for</span> (<span class="keyword">const</span> <span class="keyword">auto</span> &amp;dataPair : allData) {</div>
+<div class="line"><a id="l00341" name="l00341"></a><span class="lineno">  341</span>        QJsonDocument doc = QJsonDocument::fromJson(dataPair.second);</div>
+<div class="line"><a id="l00342" name="l00342"></a><span class="lineno">  342</span>        <span class="keywordflow">if</span> (doc.isObject()) {</div>
+<div class="line"><a id="l00343" name="l00343"></a><span class="lineno">  343</span>            QJsonArray values = doc.object()[<span class="stringliteral">&quot;values&quot;</span>].toArray();</div>
+<div class="line"><a id="l00344" name="l00344"></a><span class="lineno">  344</span>            <span class="keywordflow">for</span> (<span class="keyword">const</span> QJsonValue &amp;val : values) {</div>
+<div class="line"><a id="l00345" name="l00345"></a><span class="lineno">  345</span>                QJsonObject entry = val.toObject();</div>
+<div class="line"><a id="l00346" name="l00346"></a><span class="lineno">  346</span>                QDateTime date = QDateTime::fromString(entry[<span class="stringliteral">&quot;date&quot;</span>].toString(), Qt::ISODate);</div>
+<div class="line"><a id="l00347" name="l00347"></a><span class="lineno">  347</span>                <span class="keywordflow">if</span> (date.isValid() &amp;&amp; date &gt;= cutoffDate) {</div>
+<div class="line"><a id="l00348" name="l00348"></a><span class="lineno">  348</span>                    <span class="keywordtype">double</span> value = entry[<span class="stringliteral">&quot;value&quot;</span>].toDouble(-1.0);</div>
+<div class="line"><a id="l00349" name="l00349"></a><span class="lineno">  349</span>                    <span class="keywordflow">if</span> (value &gt;= 0) {</div>
+<div class="line"><a id="l00350" name="l00350"></a><span class="lineno">  350</span>                        aggregatedData.insert(date, value);</div>
+<div class="line"><a id="l00351" name="l00351"></a><span class="lineno">  351</span>                    }</div>
+<div class="line"><a id="l00352" name="l00352"></a><span class="lineno">  352</span>                }</div>
+<div class="line"><a id="l00353" name="l00353"></a><span class="lineno">  353</span>            }</div>
+<div class="line"><a id="l00354" name="l00354"></a><span class="lineno">  354</span>        }</div>
+<div class="line"><a id="l00355" name="l00355"></a><span class="lineno">  355</span>    }</div>
+<div class="line"><a id="l00356" name="l00356"></a><span class="lineno">  356</span> </div>
+<div class="line"><a id="l00357" name="l00357"></a><span class="lineno">  357</span>    QVector&lt;QPair&lt;QDateTime, double&gt;&gt; filteredData;</div>
+<div class="line"><a id="l00358" name="l00358"></a><span class="lineno">  358</span>    <span class="keywordflow">for</span> (<span class="keyword">auto</span> it = aggregatedData.constBegin(); it != aggregatedData.constEnd(); ++it) {</div>
+<div class="line"><a id="l00359" name="l00359"></a><span class="lineno">  359</span>        filteredData.append(qMakePair(it.key(), it.value()));</div>
+<div class="line"><a id="l00360" name="l00360"></a><span class="lineno">  360</span>    }</div>
+<div class="line"><a id="l00361" name="l00361"></a><span class="lineno">  361</span> </div>
+<div class="line"><a id="l00362" name="l00362"></a><span class="lineno">  362</span>    std::sort(filteredData.begin(), filteredData.end(),</div>
+<div class="line"><a id="l00363" name="l00363"></a><span class="lineno">  363</span>              [](<span class="keyword">const</span> <span class="keyword">auto</span> &amp;a, <span class="keyword">const</span> <span class="keyword">auto</span> &amp;b) { return a.first &lt; b.first; });</div>
+<div class="line"><a id="l00364" name="l00364"></a><span class="lineno">  364</span> </div>
+<div class="line"><a id="l00365" name="l00365"></a><span class="lineno">  365</span>    <span class="keywordflow">if</span> (!filteredData.isEmpty()) {</div>
+<div class="line"><a id="l00366" name="l00366"></a><span class="lineno">  366</span>        <a class="code hl_function" href="class_measurement_handler.html#a08a948828e5d248c12954c4f29ea32eb">MeasurementHandler::handleMeasurementsData</a>(QJsonObject(), filteredData, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblStats);</div>
+<div class="line"><a id="l00367" name="l00367"></a><span class="lineno">  367</span>        <a class="code hl_function" href="class_measurement_handler.html#ab944b9d0b1ca1a7a8fc2a8133237dd52">MeasurementHandler::updateChart</a>(filteredData, <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;chartView, <a class="code hl_variable" href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">currentStationCity</a>, <a class="code hl_variable" href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">currentStationAddress</a>, <a class="code hl_variable" href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">currentParamName</a>);</div>
+<div class="line"><a id="l00368" name="l00368"></a><span class="lineno">  368</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(QString(<span class="stringliteral">&quot;Wczytano dane historyczne z %1 dni&quot;</span>).arg(days));</div>
+<div class="line"><a id="l00369" name="l00369"></a><span class="lineno">  369</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: orange;&quot;</span>);</div>
+<div class="line"><a id="l00370" name="l00370"></a><span class="lineno">  370</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00371" name="l00371"></a><span class="lineno">  371</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setText(QString(<span class="stringliteral">&quot;Brak danych historycznych z %1 dni&quot;</span>).arg(days));</div>
+<div class="line"><a id="l00372" name="l00372"></a><span class="lineno">  372</span>        <a class="code hl_variable" href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">lblStatus</a>-&gt;setStyleSheet(<span class="stringliteral">&quot;color: red;&quot;</span>);</div>
+<div class="line"><a id="l00373" name="l00373"></a><span class="lineno">  373</span>    }</div>
+<div class="line"><a id="l00374" name="l00374"></a><span class="lineno">  374</span>}</div>
+</div>
+<div class="line"><a id="l00375" name="l00375"></a><span class="lineno">  375</span></div>
+<div class="foldopen" id="foldopen00382" data-start="{" data-end="}">
+<div class="line"><a id="l00382" name="l00382"></a><span class="lineno"><a class="line" href="class_main_window.html#ad4fc92c22319293947d2ab70f97e765b">  382</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_main_window.html#ad4fc92c22319293947d2ab70f97e765b">MainWindow::updateClock</a>() {</div>
+<div class="line"><a id="l00383" name="l00383"></a><span class="lineno">  383</span>    QString currentTime = QDateTime::currentDateTime().toString(<span class="stringliteral">&quot;dd.MM.yyyy - hh:mm:ss&quot;</span>);</div>
+<div class="line"><a id="l00384" name="l00384"></a><span class="lineno">  384</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;lblTime-&gt;setText(currentTime);</div>
+<div class="line"><a id="l00385" name="l00385"></a><span class="lineno">  385</span>}</div>
+</div>
+<div class="line"><a id="l00386" name="l00386"></a><span class="lineno">  386</span></div>
+<div class="foldopen" id="foldopen00394" data-start="{" data-end="}">
+<div class="line"><a id="l00394" name="l00394"></a><span class="lineno"><a class="line" href="class_main_window.html#a3febb9ef08a8e0f7fc00848ea540a899">  394</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a3febb9ef08a8e0f7fc00848ea540a899">MainWindow::showEvent</a>(QShowEvent *event) {</div>
+<div class="line"><a id="l00395" name="l00395"></a><span class="lineno">  395</span>    QMainWindow::showEvent(event);</div>
+<div class="line"><a id="l00396" name="l00396"></a><span class="lineno">  396</span>    <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationSearch-&gt;setFocus();</div>
+<div class="line"><a id="l00397" name="l00397"></a><span class="lineno">  397</span>}</div>
+</div>
+<div class="line"><a id="l00398" name="l00398"></a><span class="lineno">  398</span></div>
+<div class="foldopen" id="foldopen00408" data-start="{" data-end="}">
+<div class="line"><a id="l00408" name="l00408"></a><span class="lineno"><a class="line" href="class_main_window.html#a55ae3e0d4303334ccabae0a5050cfd88">  408</a></span><span class="keywordtype">void</span> <a class="code hl_function" href="class_main_window.html#a55ae3e0d4303334ccabae0a5050cfd88">MainWindow::keyPressEvent</a>(QKeyEvent *event) {</div>
+<div class="line"><a id="l00409" name="l00409"></a><span class="lineno">  409</span>    <span class="keywordflow">if</span> (event-&gt;key() == Qt::Key_Return || event-&gt;key() == Qt::Key_Enter) {</div>
+<div class="line"><a id="l00410" name="l00410"></a><span class="lineno">  410</span>        <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00411" name="l00411"></a><span class="lineno">  411</span>            QListWidgetItem *currentItem = <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;stationList-&gt;currentItem();</div>
+<div class="line"><a id="l00412" name="l00412"></a><span class="lineno">  412</span>            <span class="keywordflow">if</span> (currentItem) {</div>
+<div class="line"><a id="l00413" name="l00413"></a><span class="lineno">  413</span>                <a class="code hl_slot" href="class_main_window.html#a84bc15082aa609abef5a9cd5046e29e9">on_stationList_itemClicked</a>(currentItem);</div>
+<div class="line"><a id="l00414" name="l00414"></a><span class="lineno">  414</span>            }</div>
+<div class="line"><a id="l00415" name="l00415"></a><span class="lineno">  415</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00416" name="l00416"></a><span class="lineno">  416</span>            QListWidgetItem *currentItem = <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;sensorList-&gt;currentItem();</div>
+<div class="line"><a id="l00417" name="l00417"></a><span class="lineno">  417</span>            <span class="keywordflow">if</span> (currentItem) {</div>
+<div class="line"><a id="l00418" name="l00418"></a><span class="lineno">  418</span>                <a class="code hl_slot" href="class_main_window.html#ababdb9a889454b66306e4a3b2106434e">on_sensorList_itemClicked</a>(currentItem);</div>
+<div class="line"><a id="l00419" name="l00419"></a><span class="lineno">  419</span>            }</div>
+<div class="line"><a id="l00420" name="l00420"></a><span class="lineno">  420</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00421" name="l00421"></a><span class="lineno">  421</span>            <a class="code hl_slot" href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">on_btnHistory_clicked</a>();</div>
+<div class="line"><a id="l00422" name="l00422"></a><span class="lineno">  422</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00423" name="l00423"></a><span class="lineno">  423</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days-&gt;click();</div>
+<div class="line"><a id="l00424" name="l00424"></a><span class="lineno">  424</span>        } <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days-&gt;hasFocus()) {</div>
+<div class="line"><a id="l00425" name="l00425"></a><span class="lineno">  425</span>            <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days-&gt;click();</div>
+<div class="line"><a id="l00426" name="l00426"></a><span class="lineno">  426</span>        } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00427" name="l00427"></a><span class="lineno">  427</span>            QMainWindow::keyPressEvent(event);</div>
+<div class="line"><a id="l00428" name="l00428"></a><span class="lineno">  428</span>        }</div>
+<div class="line"><a id="l00429" name="l00429"></a><span class="lineno">  429</span>    } <span class="keywordflow">else</span> {</div>
+<div class="line"><a id="l00430" name="l00430"></a><span class="lineno">  430</span>        QMainWindow::keyPressEvent(event);</div>
+<div class="line"><a id="l00431" name="l00431"></a><span class="lineno">  431</span>    }</div>
+<div class="line"><a id="l00432" name="l00432"></a><span class="lineno">  432</span>}</div>
+</div>
+<div class="line"><a id="l00433" name="l00433"></a><span class="lineno">  433</span></div>
+<div class="foldopen" id="foldopen00444" data-start="{" data-end="}">
+<div class="line"><a id="l00444" name="l00444"></a><span class="lineno"><a class="line" href="class_main_window.html#aeaecedc36266ab4571b7af2a9fcd5b08">  444</a></span><span class="keywordtype">bool</span> <a class="code hl_function" href="class_main_window.html#aeaecedc36266ab4571b7af2a9fcd5b08">MainWindow::eventFilter</a>(QObject *obj, QEvent *event) {</div>
+<div class="line"><a id="l00445" name="l00445"></a><span class="lineno">  445</span>    <span class="keywordflow">if</span> (event-&gt;type() == QEvent::KeyPress) {</div>
+<div class="line"><a id="l00446" name="l00446"></a><span class="lineno">  446</span>        QKeyEvent *keyEvent = <span class="keyword">static_cast&lt;</span>QKeyEvent *<span class="keyword">&gt;</span>(event);</div>
+<div class="line"><a id="l00447" name="l00447"></a><span class="lineno">  447</span>        <span class="keywordflow">if</span> (keyEvent-&gt;key() == Qt::Key_Up || keyEvent-&gt;key() == Qt::Key_Down || keyEvent-&gt;key() == Qt::Key_Left || keyEvent-&gt;key() == Qt::Key_Right || keyEvent-&gt;key() == Qt::Key_Space) {</div>
+<div class="line"><a id="l00448" name="l00448"></a><span class="lineno">  448</span>            <span class="keywordflow">if</span> (obj == <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast7Days || obj == <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnLast14Days || obj == <a class="code hl_variable" href="class_main_window.html#a35466a70ed47252a0191168126a352a5">ui</a>-&gt;btnHistory) {</div>
+<div class="line"><a id="l00449" name="l00449"></a><span class="lineno">  449</span>                <span class="keywordflow">return</span> <span class="keyword">true</span>;</div>
+<div class="line"><a id="l00450" name="l00450"></a><span class="lineno">  450</span>            }</div>
+<div class="line"><a id="l00451" name="l00451"></a><span class="lineno">  451</span>        }</div>
+<div class="line"><a id="l00452" name="l00452"></a><span class="lineno">  452</span>    }</div>
+<div class="line"><a id="l00453" name="l00453"></a><span class="lineno">  453</span>    <span class="keywordflow">return</span> QMainWindow::eventFilter(obj, event);</div>
+<div class="line"><a id="l00454" name="l00454"></a><span class="lineno">  454</span>}</div>
+</div>
+<div class="ttc" id="aapiclient_8h_html"><div class="ttname"><a href="apiclient_8h.html">apiclient.h</a></div><div class="ttdoc">Definicja klasy ApiClient do zarządzania żądaniami API.</div></div>
+<div class="ttc" id="aclass_api_client_html"><div class="ttname"><a href="class_api_client.html">ApiClient</a></div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8h_source.html#l00013">apiclient.h:13</a></div></div>
+<div class="ttc" id="aclass_api_client_html_a1cdd7f66fc698e1625b247b19a07ce03"><div class="ttname"><a href="class_api_client.html#a1cdd7f66fc698e1625b247b19a07ce03">ApiClient::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;errorString)</div><div class="ttdoc">Sygnał emitowany w przypadku błędu sieciowego.</div></div>
+<div class="ttc" id="aclass_api_client_html_a9ad38f6b6114fa1a255b2196678fb526"><div class="ttname"><a href="class_api_client.html#a9ad38f6b6114fa1a255b2196678fb526">ApiClient::dataReady</a></div><div class="ttdeci">void dataReady(const QByteArray &amp;data)</div><div class="ttdoc">Sygnał emitowany po pomyślnym pobraniu danych.</div></div>
+<div class="ttc" id="aclass_connection_manager_html"><div class="ttname"><a href="class_connection_manager.html">ConnectionManager</a></div><div class="ttdef"><b>Definicja</b> <a href="connectionmanager_8h_source.html#l00019">connectionmanager.h:20</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_a2b34a6855d3f5af47793e6bd7db152f3"><div class="ttname"><a href="class_data_manager.html#a2b34a6855d3f5af47793e6bd7db152f3">DataManager::saveHistoricalData</a></div><div class="ttdeci">static void saveHistoricalData(const QString &amp;type, const QByteArray &amp;data, int id=-1)</div><div class="ttdoc">Zapisuje historyczne dane do pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00086">datamanager.cpp:86</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_abc87b1ff10d7c63ad9a7c3c952140de7"><div class="ttname"><a href="class_data_manager.html#abc87b1ff10d7c63ad9a7c3c952140de7">DataManager::loadDataFromFile</a></div><div class="ttdeci">static QByteArray loadDataFromFile(const QString &amp;baseFileName, int id=-1)</div><div class="ttdoc">Wczytuje dane z pliku JSON.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00061">datamanager.cpp:61</a></div></div>
+<div class="ttc" id="aclass_data_manager_html_aedf9b41b7ed88a159ce5190e62662b90"><div class="ttname"><a href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a></div><div class="ttdeci">static QVector&lt; QPair&lt; QDateTime, QByteArray &gt; &gt; loadAllHistoricalData(const QString &amp;type, int id)</div><div class="ttdoc">Wczytuje wszystkie historyczne dane pomiarów dla danego identyfikatora.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00121">datamanager.cpp:121</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a045869e6a02484ea3ec630386f74a2aa"><div class="ttname"><a href="class_main_window.html#a045869e6a02484ea3ec630386f74a2aa">MainWindow::on_btnHistory_clicked</a></div><div class="ttdeci">void on_btnHistory_clicked()</div><div class="ttdoc">Obsługuje kliknięcie przycisku historii.</div><div class="ttdef"><b>Definicja</b> <a href="#l00275">mainwindow.cpp:275</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a29d28bf2719d3c62d5d797ad0d9b66c7"><div class="ttname"><a href="class_main_window.html#a29d28bf2719d3c62d5d797ad0d9b66c7">MainWindow::lblStatus</a></div><div class="ttdeci">QLabel * lblStatus</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00146">mainwindow.h:146</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a35466a70ed47252a0191168126a352a5"><div class="ttname"><a href="class_main_window.html#a35466a70ed47252a0191168126a352a5">MainWindow::ui</a></div><div class="ttdeci">Ui::MainWindow * ui</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00141">mainwindow.h:141</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a3e16e6d5bd4c0ce543bb06e54b712f3b"><div class="ttname"><a href="class_main_window.html#a3e16e6d5bd4c0ce543bb06e54b712f3b">MainWindow::onErrorOccurred</a></div><div class="ttdeci">void onErrorOccurred(const QString &amp;error)</div><div class="ttdoc">Obsługuje błędy zgłoszone przez ApiClient.</div><div class="ttdef"><b>Definicja</b> <a href="#l00143">mainwindow.cpp:143</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a3febb9ef08a8e0f7fc00848ea540a899"><div class="ttname"><a href="class_main_window.html#a3febb9ef08a8e0f7fc00848ea540a899">MainWindow::showEvent</a></div><div class="ttdeci">void showEvent(QShowEvent *event) override</div><div class="ttdoc">Obsługuje zdarzenie pokazania okna.</div><div class="ttdef"><b>Definicja</b> <a href="#l00394">mainwindow.cpp:394</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a4a77abfec41934afc92cf8693448153a"><div class="ttname"><a href="class_main_window.html#a4a77abfec41934afc92cf8693448153a">MainWindow::currentStationAddress</a></div><div class="ttdeci">QString currentStationAddress</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00151">mainwindow.h:151</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a55ae3e0d4303334ccabae0a5050cfd88"><div class="ttname"><a href="class_main_window.html#a55ae3e0d4303334ccabae0a5050cfd88">MainWindow::keyPressEvent</a></div><div class="ttdeci">void keyPressEvent(QKeyEvent *event) override</div><div class="ttdoc">Obsługuje zdarzenia naciśnięcia klawisza.</div><div class="ttdef"><b>Definicja</b> <a href="#l00408">mainwindow.cpp:408</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a5bcd11d01a5b7483182f21dd30241a11"><div class="ttname"><a href="class_main_window.html#a5bcd11d01a5b7483182f21dd30241a11">MainWindow::currentStationCity</a></div><div class="ttdeci">QString currentStationCity</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00150">mainwindow.h:150</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a65e9034db7b7bd4bbc007b216514d2ae"><div class="ttname"><a href="class_main_window.html#a65e9034db7b7bd4bbc007b216514d2ae">MainWindow::apiClient</a></div><div class="ttdeci">ApiClient * apiClient</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00142">mainwindow.h:142</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a6fc7e6730b34db30161131c62b5294a0"><div class="ttname"><a href="class_main_window.html#a6fc7e6730b34db30161131c62b5294a0">MainWindow::currentSensorId</a></div><div class="ttdeci">int currentSensorId</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00149">mainwindow.h:149</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a807af19e6281ccdaddac16870be7a940"><div class="ttname"><a href="class_main_window.html#a807af19e6281ccdaddac16870be7a940">MainWindow::isOffline</a></div><div class="ttdeci">bool isOffline</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00147">mainwindow.h:147</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a81538338b37a2b54dc8eccabc06b0311"><div class="ttname"><a href="class_main_window.html#a81538338b37a2b54dc8eccabc06b0311">MainWindow::connectionManager</a></div><div class="ttdeci">ConnectionManager * connectionManager</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00143">mainwindow.h:143</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a84bc15082aa609abef5a9cd5046e29e9"><div class="ttname"><a href="class_main_window.html#a84bc15082aa609abef5a9cd5046e29e9">MainWindow::on_stationList_itemClicked</a></div><div class="ttdeci">void on_stationList_itemClicked(QListWidgetItem *item)</div><div class="ttdoc">Obsługuje kliknięcie elementu listy stacji.</div><div class="ttdef"><b>Definicja</b> <a href="#l00171">mainwindow.cpp:171</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a942d10435960a8debad382b4ae3e4092"><div class="ttname"><a href="class_main_window.html#a942d10435960a8debad382b4ae3e4092">MainWindow::loadHistoricalData</a></div><div class="ttdeci">void loadHistoricalData(int days)</div><div class="ttdoc">Wczytuje historyczne dane pomiarów dla określonego zakresu dni.</div><div class="ttdef"><b>Definicja</b> <a href="#l00328">mainwindow.cpp:328</a></div></div>
+<div class="ttc" id="aclass_main_window_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="class_main_window.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdoc">Konstruktor klasy MainWindow.</div><div class="ttdef"><b>Definicja</b> <a href="#l00026">mainwindow.cpp:26</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aa15d9094339c6e950fd0f51e03fd8abe"><div class="ttname"><a href="class_main_window.html#aa15d9094339c6e950fd0f51e03fd8abe">MainWindow::allStations</a></div><div class="ttdeci">QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; allStations</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00153">mainwindow.h:153</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aa5e1769969292badacbebc1175ffd3e7"><div class="ttname"><a href="class_main_window.html#aa5e1769969292badacbebc1175ffd3e7">MainWindow::currentParamName</a></div><div class="ttdeci">QString currentParamName</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00152">mainwindow.h:152</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aad6f9bd9ec6a87df435860ff60dfaa72"><div class="ttname"><a href="class_main_window.html#aad6f9bd9ec6a87df435860ff60dfaa72">MainWindow::clockTimer</a></div><div class="ttdeci">QTimer * clockTimer</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00144">mainwindow.h:144</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aad978701da4e3fa0935af53d81b4acab"><div class="ttname"><a href="class_main_window.html#aad978701da4e3fa0935af53d81b4acab">MainWindow::connectionCheckTimer</a></div><div class="ttdeci">QTimer * connectionCheckTimer</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00145">mainwindow.h:145</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ababdb9a889454b66306e4a3b2106434e"><div class="ttname"><a href="class_main_window.html#ababdb9a889454b66306e4a3b2106434e">MainWindow::on_sensorList_itemClicked</a></div><div class="ttdeci">void on_sensorList_itemClicked(QListWidgetItem *item)</div><div class="ttdoc">Obsługuje kliknięcie elementu listy czujników.</div><div class="ttdef"><b>Definicja</b> <a href="#l00213">mainwindow.cpp:213</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ac06b776a4ea57751c5a0813141f18f3a"><div class="ttname"><a href="class_main_window.html#ac06b776a4ea57751c5a0813141f18f3a">MainWindow::currentSensors</a></div><div class="ttdeci">QVector&lt; QPair&lt; int, QString &gt; &gt; currentSensors</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00154">mainwindow.h:154</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ad4fc92c22319293947d2ab70f97e765b"><div class="ttname"><a href="class_main_window.html#ad4fc92c22319293947d2ab70f97e765b">MainWindow::updateClock</a></div><div class="ttdeci">void updateClock()</div><div class="ttdoc">Aktualizuje zegar w interfejsie użytkownika.</div><div class="ttdef"><b>Definicja</b> <a href="#l00382">mainwindow.cpp:382</a></div></div>
+<div class="ttc" id="aclass_main_window_html_add3a2755fa8e683d88e8b6c362926ccb"><div class="ttname"><a href="class_main_window.html#add3a2755fa8e683d88e8b6c362926ccb">MainWindow::onDataReady</a></div><div class="ttdeci">void onDataReady(const QString &amp;data)</div><div class="ttdoc">Obsługuje dane zwrócone przez ApiClient.</div><div class="ttdef"><b>Definicja</b> <a href="#l00098">mainwindow.cpp:98</a></div></div>
+<div class="ttc" id="aclass_main_window_html_ae98d00a93bc118200eeef9f9bba1dba7"><div class="ttname"><a href="class_main_window.html#ae98d00a93bc118200eeef9f9bba1dba7">MainWindow::~MainWindow</a></div><div class="ttdeci">~MainWindow()</div><div class="ttdoc">Destruktor klasy MainWindow.</div><div class="ttdef"><b>Definicja</b> <a href="#l00085">mainwindow.cpp:85</a></div></div>
+<div class="ttc" id="aclass_main_window_html_aeaecedc36266ab4571b7af2a9fcd5b08"><div class="ttname"><a href="class_main_window.html#aeaecedc36266ab4571b7af2a9fcd5b08">MainWindow::eventFilter</a></div><div class="ttdeci">bool eventFilter(QObject *obj, QEvent *event) override</div><div class="ttdoc">Filtruje zdarzenia dla obiektów interfejsu użytkownika.</div><div class="ttdef"><b>Definicja</b> <a href="#l00444">mainwindow.cpp:444</a></div></div>
+<div class="ttc" id="aclass_main_window_html_af8c6d9ccfb874c6e4dc48987dc508cc8"><div class="ttname"><a href="class_main_window.html#af8c6d9ccfb874c6e4dc48987dc508cc8">MainWindow::currentStationId</a></div><div class="ttdeci">int currentStationId</div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00148">mainwindow.h:148</a></div></div>
+<div class="ttc" id="aclass_measurement_handler_html_a08a948828e5d248c12954c4f29ea32eb"><div class="ttname"><a href="class_measurement_handler.html#a08a948828e5d248c12954c4f29ea32eb">MeasurementHandler::handleMeasurementsData</a></div><div class="ttdeci">static void handleMeasurementsData(const QJsonObject &amp;obj, const QVector&lt; QPair&lt; QDateTime, double &gt; &gt; &amp;customData, QLabel *lblStats)</div><div class="ttdoc">Przetwarza dane pomiarowe i aktualizuje statystyki w interfejsie użytkownika.</div><div class="ttdef"><b>Definicja</b> <a href="measurementhandler_8cpp_source.html#l00019">measurementhandler.cpp:19</a></div></div>
+<div class="ttc" id="aclass_measurement_handler_html_ab944b9d0b1ca1a7a8fc2a8133237dd52"><div class="ttname"><a href="class_measurement_handler.html#ab944b9d0b1ca1a7a8fc2a8133237dd52">MeasurementHandler::updateChart</a></div><div class="ttdeci">static void updateChart(const QVector&lt; QPair&lt; QDateTime, double &gt; &gt; &amp;data, QChartView *chartView, const QString &amp;stationCity, const QString &amp;stationAddress, const QString &amp;paramName)</div><div class="ttdoc">Aktualizuje wykres danych pomiarowych w interfejsie użytkownika.</div><div class="ttdef"><b>Definicja</b> <a href="measurementhandler_8cpp_source.html#l00103">measurementhandler.cpp:103</a></div></div>
+<div class="ttc" id="aclass_sensor_handler_html_a12af22d7a2df5d49e5591401737d9d3d"><div class="ttname"><a href="class_sensor_handler.html#a12af22d7a2df5d49e5591401737d9d3d">SensorHandler::handleSensorsData</a></div><div class="ttdeci">static void handleSensorsData(const QJsonArray &amp;array, QListWidget *sensorList, QVector&lt; QPair&lt; int, QString &gt; &gt; &amp;currentSensors)</div><div class="ttdoc">Przetwarza dane czujników z tablicy JSON i aktualizuje listę czujników.</div><div class="ttdef"><b>Definicja</b> <a href="sensorhandler_8cpp_source.html#l00021">sensorhandler.cpp:21</a></div></div>
+<div class="ttc" id="aclass_station_handler_html_ac3f14b21a8554f54a68b76cef4508e40"><div class="ttname"><a href="class_station_handler.html#ac3f14b21a8554f54a68b76cef4508e40">StationHandler::handleStationsData</a></div><div class="ttdeci">static void handleStationsData(const QJsonArray &amp;array, QListWidget *stationList, QLabel *lblStationCount, QList&lt; QPair&lt; QString, QJsonObject &gt; &gt; &amp;allStations)</div><div class="ttdoc">Przetwarza dane stacji z tablicy JSON i aktualizuje listę stacji.</div><div class="ttdef"><b>Definicja</b> <a href="stationhandler_8cpp_source.html#l00023">stationhandler.cpp:23</a></div></div>
+<div class="ttc" id="aconnectionmanager_8h_html"><div class="ttname"><a href="connectionmanager_8h.html">connectionmanager.h</a></div><div class="ttdoc">Definicja klasy ConnectionManager do zarządzania połączeniami sieciowymi.</div></div>
+<div class="ttc" id="adatamanager_8h_html"><div class="ttname"><a href="datamanager_8h.html">datamanager.h</a></div><div class="ttdoc">Definicja klasy DataManager do zarządzania danymi aplikacji.</div></div>
+<div class="ttc" id="amainwindow_8h_html"><div class="ttname"><a href="mainwindow_8h.html">mainwindow.h</a></div><div class="ttdoc">Definicja klasy MainWindow dla głównego okna aplikacji.</div></div>
+<div class="ttc" id="ameasurementhandler_8h_html"><div class="ttname"><a href="measurementhandler_8h.html">measurementhandler.h</a></div><div class="ttdoc">Definicja klasy MeasurementHandler do obsługi danych pomiarowych.</div></div>
+<div class="ttc" id="anamespace_ui_html"><div class="ttname"><a href="namespace_ui.html">Ui</a></div><div class="ttdef"><b>Definicja</b> <a href="mainwindow_8h_source.html#l00018">mainwindow.h:18</a></div></div>
+<div class="ttc" id="asensorhandler_8h_html"><div class="ttname"><a href="sensorhandler_8h.html">sensorhandler.h</a></div><div class="ttdoc">Definicja klasy SensorHandler do obsługi danych czujników.</div></div>
+<div class="ttc" id="astationhandler_8h_html"><div class="ttname"><a href="stationhandler_8h.html">stationhandler.h</a></div><div class="ttdoc">Definicja klasy StationHandler do obsługi danych stacji.</div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="mainwindow_8cpp.html">mainwindow.cpp</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>

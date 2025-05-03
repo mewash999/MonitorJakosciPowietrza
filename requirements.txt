@@ -1,5 +1,4 @@
-# Wymagania
-## Framework Qt
+## Wymagania
 qt-core>=5.15
 qt-charts>=5.15 
 qt-network>=5.15

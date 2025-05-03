@@ -1,0 +1,115 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="pl">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=11"/>
+<meta name="generator" content="Doxygen 1.13.2"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>MJP: Plik źródłowy apiclient.h</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<script type="text/javascript" src="clipboard.js"></script>
+<link href="navtree.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="navtreedata.js"></script>
+<script type="text/javascript" src="navtree.js"></script>
+<script type="text/javascript" src="resize.js"></script>
+<script type="text/javascript" src="cookie.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr id="projectrow">
+  <td id="projectalign">
+   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   </div>
+   <div id="projectbrief">Monitor Jakości Powietrza</div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- Wygenerowano za pomocą Doxygen 1.13.2 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function() { codefold.init(0); });
+/* @license-end */
+</script>
+</div><!-- top -->
+<div id="side-nav" class="ui-resizable side-nav-resizable">
+  <div id="nav-tree">
+    <div id="nav-tree-contents">
+    </div>
+  </div>
+  <div id="splitbar" style="-moz-user-select:none;" 
+       class="ui-resizable-handle">
+  </div>
+</div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){initNavTree('apiclient_8h_source.html',''); initResizable(true); });
+/* @license-end */
+</script>
+<div id="doc-content">
+<div class="header">
+  <div class="headertitle"><div class="title">apiclient.h</div></div>
+</div><!--header-->
+<div class="contents">
+<a href="apiclient_8h.html">Idź do dokumentacji tego pliku.</a><div class="fragment"><div class="line"><a id="l00001" name="l00001"></a><span class="lineno">    1</span></div>
+<div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
+<div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span><span class="preprocessor"> #ifndef APICLIENT_H</span></div>
+<div class="line"><a id="l00007" name="l00007"></a><span class="lineno">    7</span><span class="preprocessor"> #define APICLIENT_H</span></div>
+<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span> </div>
+<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="preprocessor"> #include &lt;QObject&gt;</span></div>
+<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="preprocessor"> #include &lt;QThread&gt;</span></div>
+<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span><span class="preprocessor"> #include &quot;<a class="code" href="apiworker_8h.html">apiworker.h</a>&quot;</span></div>
+<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
+<div class="foldopen" id="foldopen00013" data-start="{" data-end="};">
+<div class="line"><a id="l00013" name="l00013"></a><span class="lineno"><a class="line" href="class_api_client.html">   13</a></span> <span class="keyword">class </span><a class="code hl_function" href="class_api_client.html#a7ac17ab761c4ee56fa63802573b343e3">ApiClient</a> : <span class="keyword">public</span> QObject {</div>
+<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>     Q_OBJECT</div>
+<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> <span class="keyword">public</span>:</div>
+<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span>     <span class="keyword">explicit</span> <a class="code hl_function" href="class_api_client.html#a7ac17ab761c4ee56fa63802573b343e3">ApiClient</a>(QObject *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span> </div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>     <a class="code hl_function" href="class_api_client.html#ab4fae42eee49854da3247d72d01c165d">~ApiClient</a>();</div>
+<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span> </div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span>     <span class="keywordtype">void</span> <a class="code hl_function" href="class_api_client.html#aff9fbad0d6d8ece1cbe02ce1e0ffc176">fetchData</a>(<span class="keyword">const</span> QUrl &amp;url);</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="line"><a id="l00046" name="l00046"></a><span class="lineno">   46</span>     <span class="keywordtype">void</span> <a class="code hl_function" href="class_api_client.html#a9049cac8076b0378d1b5b1d5d76843d9">fetchSensorData</a>(<span class="keywordtype">int</span> stationId);</div>
+<div class="line"><a id="l00047" name="l00047"></a><span class="lineno">   47</span> </div>
+<div class="line"><a id="l00048" name="l00048"></a><span class="lineno">   48</span> signals:</div>
+<div class="line"><a id="l00054" name="l00054"></a><span class="lineno"><a class="line" href="class_api_client.html#a9ad38f6b6114fa1a255b2196678fb526">   54</a></span>     <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a9ad38f6b6114fa1a255b2196678fb526">dataReady</a>(<span class="keyword">const</span> QByteArray &amp;data);</div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span> </div>
+<div class="line"><a id="l00061" name="l00061"></a><span class="lineno"><a class="line" href="class_api_client.html#a1cdd7f66fc698e1625b247b19a07ce03">   61</a></span>     <span class="keywordtype">void</span> <a class="code hl_signal" href="class_api_client.html#a1cdd7f66fc698e1625b247b19a07ce03">errorOccurred</a>(<span class="keyword">const</span> QString &amp;errorString);</div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span> </div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> <span class="keyword">private</span>:</div>
+<div class="line"><a id="l00064" name="l00064"></a><span class="lineno"><a class="line" href="class_api_client.html#a18bb874645dc003287f455ea9c222704">   64</a></span>     QThread <a class="code hl_variable" href="class_api_client.html#a18bb874645dc003287f455ea9c222704">workerThread</a>; </div>
+<div class="line"><a id="l00065" name="l00065"></a><span class="lineno"><a class="line" href="class_api_client.html#afe5a640d164b64e845876bbe15331080">   65</a></span>     <a class="code hl_class" href="class_api_worker.html">ApiWorker</a> *<a class="code hl_variable" href="class_api_client.html#afe5a640d164b64e845876bbe15331080">worker</a>;    </div>
+<div class="line"><a id="l00066" name="l00066"></a><span class="lineno">   66</span> };</div>
+</div>
+<div class="line"><a id="l00067" name="l00067"></a><span class="lineno">   67</span> </div>
+<div class="line"><a id="l00068" name="l00068"></a><span class="lineno">   68</span><span class="preprocessor"> #endif</span></div>
+<div class="ttc" id="aapiworker_8h_html"><div class="ttname"><a href="apiworker_8h.html">apiworker.h</a></div><div class="ttdoc">Definicja klasy ApiWorker do wykonywania żądań sieciowych w oddzielnym wątku.</div></div>
+<div class="ttc" id="aclass_api_client_html_a18bb874645dc003287f455ea9c222704"><div class="ttname"><a href="class_api_client.html#a18bb874645dc003287f455ea9c222704">ApiClient::workerThread</a></div><div class="ttdeci">QThread workerThread</div><div class="ttdoc">Wątek, w którym działa obiekt ApiWorker.</div><div class="ttdef"><b>Definicja</b> <a href="#l00064">apiclient.h:64</a></div></div>
+<div class="ttc" id="aclass_api_client_html_a1cdd7f66fc698e1625b247b19a07ce03"><div class="ttname"><a href="class_api_client.html#a1cdd7f66fc698e1625b247b19a07ce03">ApiClient::errorOccurred</a></div><div class="ttdeci">void errorOccurred(const QString &amp;errorString)</div><div class="ttdoc">Sygnał emitowany w przypadku błędu sieciowego.</div></div>
+<div class="ttc" id="aclass_api_client_html_a7ac17ab761c4ee56fa63802573b343e3"><div class="ttname"><a href="class_api_client.html#a7ac17ab761c4ee56fa63802573b343e3">ApiClient::ApiClient</a></div><div class="ttdeci">ApiClient(QObject *parent=nullptr)</div><div class="ttdoc">Konstruktor klasy ApiClient.</div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8cpp_source.html#l00019">apiclient.cpp:19</a></div></div>
+<div class="ttc" id="aclass_api_client_html_a9049cac8076b0378d1b5b1d5d76843d9"><div class="ttname"><a href="class_api_client.html#a9049cac8076b0378d1b5b1d5d76843d9">ApiClient::fetchSensorData</a></div><div class="ttdeci">void fetchSensorData(int stationId)</div><div class="ttdoc">Inicjuje żądanie sieciowe dla danych czujników stacji.</div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8cpp_source.html#l00072">apiclient.cpp:72</a></div></div>
+<div class="ttc" id="aclass_api_client_html_a9ad38f6b6114fa1a255b2196678fb526"><div class="ttname"><a href="class_api_client.html#a9ad38f6b6114fa1a255b2196678fb526">ApiClient::dataReady</a></div><div class="ttdeci">void dataReady(const QByteArray &amp;data)</div><div class="ttdoc">Sygnał emitowany po pomyślnym pobraniu danych.</div></div>
+<div class="ttc" id="aclass_api_client_html_ab4fae42eee49854da3247d72d01c165d"><div class="ttname"><a href="class_api_client.html#ab4fae42eee49854da3247d72d01c165d">ApiClient::~ApiClient</a></div><div class="ttdeci">~ApiClient()</div><div class="ttdoc">Destruktor klasy ApiClient.</div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8cpp_source.html#l00041">apiclient.cpp:41</a></div></div>
+<div class="ttc" id="aclass_api_client_html_afe5a640d164b64e845876bbe15331080"><div class="ttname"><a href="class_api_client.html#afe5a640d164b64e845876bbe15331080">ApiClient::worker</a></div><div class="ttdeci">ApiWorker * worker</div><div class="ttdoc">Wskaźnik na obiekt ApiWorker do obsługi żądań sieciowych.</div><div class="ttdef"><b>Definicja</b> <a href="#l00065">apiclient.h:65</a></div></div>
+<div class="ttc" id="aclass_api_client_html_aff9fbad0d6d8ece1cbe02ce1e0ffc176"><div class="ttname"><a href="class_api_client.html#aff9fbad0d6d8ece1cbe02ce1e0ffc176">ApiClient::fetchData</a></div><div class="ttdeci">void fetchData(const QUrl &amp;url)</div><div class="ttdoc">Inicjuje żądanie sieciowe dla podanego adresu URL.</div><div class="ttdef"><b>Definicja</b> <a href="apiclient_8cpp_source.html#l00056">apiclient.cpp:56</a></div></div>
+<div class="ttc" id="aclass_api_worker_html"><div class="ttname"><a href="class_api_worker.html">ApiWorker</a></div><div class="ttdef"><b>Definicja</b> <a href="apiworker_8h_source.html#l00015">apiworker.h:16</a></div></div>
+</div><!-- fragment --></div><!-- contents -->
+</div><!-- doc-content -->
+<!-- start footer part -->
+<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
+  <ul>
+    <li class="navelem"><a class="el" href="apiclient_8h.html">apiclient.h</a></li>
+    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
+  </ul>
+</div>
+</body>
+</html>
