@@ -26,4 +26,4 @@ var menudata={children:[
 {text:"README",url:"index.html"},
 {text:"Struktury Danych",url:"annotated.html"},
 {text:"Pola danych",url:"functions.html"},
-{text:"Pliki",url:"files.html"}]}
+{text:"Pliki kodu",url:"files.html"}]}
