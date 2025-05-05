@@ -5,16 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MJP: Dokumentacja klasy MainWindow</title>
+<title>Monitor Jakości Powietrza: Dokumentacja klasy MainWindow</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">Monitor Jakości Powietrza<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">Monitor Jakości Powietrza</div>
   </td>
  </tr>
  </tbody>
@@ -39,21 +35,22 @@
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('class_main_window.html',''); initResizable(true); });
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj',false);
+});
 /* @license-end */
 </script>
+<div id="main-nav"></div>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
+</div><!-- top -->
 <div id="doc-content">
 <div class="header">
   <div class="summary">
@@ -66,12 +63,6 @@ $(function(){initNavTree('class_main_window.html',''); initResizable(true); });
 <div class="contents">
 
 <p><code>#include &lt;<a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>&gt;</code></p>
-<div class="dynheader">
-Diagram dziedziczenia dla MainWindow</div>
-<div class="dyncontent">
- <div class="center">
-  <img src="class_main_window.png" alt=""/>
- </div></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
@@ -186,6 +177,10 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00026">26</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00153">allStations</a>, <a class="el" href="mainwindow_8h_source.html#l00142">apiClient</a>, <a class="el" href="mainwindow_8h_source.html#l00144">clockTimer</a>, <a class="el" href="mainwindow_8h_source.html#l00145">connectionCheckTimer</a>, <a class="el" href="mainwindow_8h_source.html#l00143">connectionManager</a>, <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00148">currentStationId</a>, <a class="el" href="class_api_client.html#acea97191b733738ce7f1ca6f3f32a646">ApiClient::dataReady()</a>, <a class="el" href="class_api_client.html#a85279513926ec1d33c11dddf7782cb34">ApiClient::errorOccurred()</a>, <a class="el" href="mainwindow_8h_source.html#l00147">isOffline</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>, <a class="el" href="mainwindow_8h_source.html#l00141">ui</a> i <a class="el" href="mainwindow_8cpp_source.html#l00382">updateClock()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
+
 </div>
 </div>
 <a id="ae98d00a93bc118200eeef9f9bba1dba7" name="ae98d00a93bc118200eeef9f9bba1dba7"></a>
@@ -208,6 +203,8 @@ Atrybuty prywatne</h2></td></tr>
 <p>Zwalnia zasoby związane z interfejsem użytkownika (<code>ui</code>) oraz obiektami podrzędnymi. </p>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00085">85</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
 
 </div>
 </div>
@@ -261,6 +258,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00444">444</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
+
 </div>
 </div>
 <a id="a55ae3e0d4303334ccabae0a5050cfd88" name="a55ae3e0d4303334ccabae0a5050cfd88"></a>
@@ -303,6 +302,8 @@ Atrybuty prywatne</h2></td></tr>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00408">408</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
 
 </div>
 </div>
@@ -347,6 +348,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00328">328</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00152">currentParamName</a>, <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00151">currentStationAddress</a>, <a class="el" href="mainwindow_8h_source.html#l00150">currentStationCity</a>, <a class="el" href="measurementhandler_8cpp_source.html#l00019">MeasurementHandler::handleMeasurementsData()</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="datamanager_8cpp_source.html#l00121">DataManager::loadAllHistoricalData()</a>, <a class="el" href="mainwindow_8h_source.html#l00141">ui</a> i <a class="el" href="measurementhandler_8cpp_source.html#l00103">MeasurementHandler::updateChart()</a>.</p>
+
 </div>
 </div>
 <a id="a045869e6a02484ea3ec630386f74a2aa" name="a045869e6a02484ea3ec630386f74a2aa"></a>
@@ -377,6 +380,10 @@ Atrybuty prywatne</h2></td></tr>
 <p>Wczytuje wszystkie dane historyczne dla bieżącego czujnika, agreguje je w posortowanym wektorze i aktualizuje statystyki oraz wykres w interfejsie użytkownika. Wyświetla odpowiedni komunikat w zależności od dostępności danych. </p>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00275">275</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00152">currentParamName</a>, <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00151">currentStationAddress</a>, <a class="el" href="mainwindow_8h_source.html#l00150">currentStationCity</a>, <a class="el" href="measurementhandler_8cpp_source.html#l00019">MeasurementHandler::handleMeasurementsData()</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="datamanager_8cpp_source.html#l00121">DataManager::loadAllHistoricalData()</a>, <a class="el" href="mainwindow_8h_source.html#l00141">ui</a> i <a class="el" href="measurementhandler_8cpp_source.html#l00103">MeasurementHandler::updateChart()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00408">keyPressEvent()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>.</p>
 
 </div>
 </div>
@@ -421,6 +428,10 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00213">213</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00142">apiClient</a>, <a class="el" href="mainwindow_8h_source.html#l00152">currentParamName</a>, <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00154">currentSensors</a>, <a class="el" href="mainwindow_8h_source.html#l00151">currentStationAddress</a>, <a class="el" href="mainwindow_8h_source.html#l00150">currentStationCity</a>, <a class="el" href="measurementhandler_8cpp_source.html#l00019">MeasurementHandler::handleMeasurementsData()</a>, <a class="el" href="mainwindow_8h_source.html#l00147">isOffline</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="datamanager_8cpp_source.html#l00121">DataManager::loadAllHistoricalData()</a>, <a class="el" href="mainwindow_8h_source.html#l00141">ui</a> i <a class="el" href="measurementhandler_8cpp_source.html#l00103">MeasurementHandler::updateChart()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00408">keyPressEvent()</a>.</p>
+
 </div>
 </div>
 <a id="a84bc15082aa609abef5a9cd5046e29e9" name="a84bc15082aa609abef5a9cd5046e29e9"></a>
@@ -463,6 +474,10 @@ Atrybuty prywatne</h2></td></tr>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00171">171</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00153">allStations</a>, <a class="el" href="mainwindow_8h_source.html#l00142">apiClient</a>, <a class="el" href="mainwindow_8h_source.html#l00154">currentSensors</a>, <a class="el" href="mainwindow_8h_source.html#l00151">currentStationAddress</a>, <a class="el" href="mainwindow_8h_source.html#l00150">currentStationCity</a>, <a class="el" href="mainwindow_8h_source.html#l00148">currentStationId</a>, <a class="el" href="mainwindow_8h_source.html#l00147">isOffline</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="datamanager_8cpp_source.html#l00061">DataManager::loadDataFromFile()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a> i <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00408">keyPressEvent()</a>.</p>
 
 </div>
 </div>
@@ -507,6 +522,10 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00098">98</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00153">allStations</a>, <a class="el" href="mainwindow_8h_source.html#l00152">currentParamName</a>, <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00154">currentSensors</a>, <a class="el" href="mainwindow_8h_source.html#l00151">currentStationAddress</a>, <a class="el" href="mainwindow_8h_source.html#l00150">currentStationCity</a>, <a class="el" href="mainwindow_8h_source.html#l00148">currentStationId</a>, <a class="el" href="measurementhandler_8cpp_source.html#l00019">MeasurementHandler::handleMeasurementsData()</a>, <a class="el" href="sensorhandler_8cpp_source.html#l00021">SensorHandler::handleSensorsData()</a>, <a class="el" href="stationhandler_8cpp_source.html#l00023">StationHandler::handleStationsData()</a>, <a class="el" href="datamanager_8cpp_source.html#l00086">DataManager::saveHistoricalData()</a>, <a class="el" href="mainwindow_8h_source.html#l00141">ui</a> i <a class="el" href="measurementhandler_8cpp_source.html#l00103">MeasurementHandler::updateChart()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>.</p>
+
 </div>
 </div>
 <a id="a3e16e6d5bd4c0ce543bb06e54b712f3b" name="a3e16e6d5bd4c0ce543bb06e54b712f3b"></a>
@@ -549,6 +568,10 @@ Atrybuty prywatne</h2></td></tr>
 </dl>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00143">143</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
+
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00149">currentSensorId</a>, <a class="el" href="mainwindow_8h_source.html#l00148">currentStationId</a>, <a class="el" href="mainwindow_8h_source.html#l00146">lblStatus</a>, <a class="el" href="datamanager_8cpp_source.html#l00061">DataManager::loadDataFromFile()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
 
 </div>
 </div>
@@ -593,6 +616,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00394">394</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
+
 </div>
 </div>
 <a id="ad4fc92c22319293947d2ab70f97e765b" name="ad4fc92c22319293947d2ab70f97e765b"></a>
@@ -624,6 +649,10 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8cpp_source.html#l00382">382</a> pliku <a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a>.</p>
 
+<p class="reference">Odwołuje się do <a class="el" href="mainwindow_8h_source.html#l00141">ui</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
+
 </div>
 </div>
 <h2 class="groupheader">Dokumentacja pól</h2>
@@ -649,6 +678,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00153">153</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
+
 </div>
 </div>
 <a id="a65e9034db7b7bd4bbc007b216514d2ae" name="a65e9034db7b7bd4bbc007b216514d2ae"></a>
@@ -672,6 +703,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00142">142</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a>.</p>
 
 </div>
 </div>
@@ -697,6 +730,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00144">144</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
+
 </div>
 </div>
 <a id="aad978701da4e3fa0935af53d81b4acab" name="aad978701da4e3fa0935af53d81b4acab"></a>
@@ -720,6 +755,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00145">145</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
 
 </div>
 </div>
@@ -745,6 +782,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00143">143</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>.</p>
+
 </div>
 </div>
 <a id="aa5e1769969292badacbebc1175ffd3e7" name="aa5e1769969292badacbebc1175ffd3e7"></a>
@@ -768,6 +807,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00152">152</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
 
 </div>
 </div>
@@ -793,6 +834,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00149">149</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>.</p>
+
 </div>
 </div>
 <a id="ac06b776a4ea57751c5a0813141f18f3a" name="ac06b776a4ea57751c5a0813141f18f3a"></a>
@@ -816,6 +859,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00154">154</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
 
 </div>
 </div>
@@ -841,6 +886,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00151">151</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
+
 </div>
 </div>
 <a id="a5bcd11d01a5b7483182f21dd30241a11" name="a5bcd11d01a5b7483182f21dd30241a11"></a>
@@ -864,6 +911,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00150">150</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>.</p>
 
 </div>
 </div>
@@ -889,6 +938,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00148">148</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>.</p>
+
 </div>
 </div>
 <a id="a807af19e6281ccdaddac16870be7a940" name="a807af19e6281ccdaddac16870be7a940"></a>
@@ -912,6 +963,8 @@ Atrybuty prywatne</h2></td></tr>
 </div><div class="memdoc">
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00147">147</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
+
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a>.</p>
 
 </div>
 </div>
@@ -937,6 +990,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00146">146</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00143">onErrorOccurred()</a>.</p>
+
 </div>
 </div>
 <a id="a35466a70ed47252a0191168126a352a5" name="a35466a70ed47252a0191168126a352a5"></a>
@@ -961,6 +1016,8 @@ Atrybuty prywatne</h2></td></tr>
 
 <p class="definition">Definicja w linii <a class="el" href="mainwindow_8h_source.html#l00141">141</a> pliku <a class="el" href="mainwindow_8h_source.html">mainwindow.h</a>.</p>
 
+<p class="reference">Odwołania w <a class="el" href="mainwindow_8cpp_source.html#l00444">eventFilter()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00408">keyPressEvent()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00328">loadHistoricalData()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00026">MainWindow()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00275">on_btnHistory_clicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00213">on_sensorList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00171">on_stationList_itemClicked()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00098">onDataReady()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00394">showEvent()</a>, <a class="el" href="mainwindow_8cpp_source.html#l00382">updateClock()</a> i <a class="el" href="mainwindow_8cpp_source.html#l00085">~MainWindow()</a>.</p>
+
 </div>
 </div>
 <hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
@@ -968,13 +1025,10 @@ Atrybuty prywatne</h2></td></tr>
 <li><a class="el" href="mainwindow_8cpp_source.html">mainwindow.cpp</a></li>
 </ul>
 </div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="class_main_window.html">MainWindow</a></li>
-    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

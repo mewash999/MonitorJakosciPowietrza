@@ -5,16 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MJP: Plik źródłowy apiworker.cpp</title>
+<title>Monitor Jakości Powietrza: Plik źródłowy apiworker.cpp</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">Monitor Jakości Powietrza<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">Monitor Jakości Powietrza</div>
   </td>
  </tr>
  </tbody>
@@ -39,22 +35,23 @@
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); });
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj',false);
+});
 /* @license-end */
 </script>
+<div id="main-nav"></div>
+</div><!-- top -->
 <div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <div class="header">
   <div class="headertitle"><div class="title">apiworker.cpp</div></div>
 </div><!--header-->
@@ -66,7 +63,7 @@ $(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); 
 <div class="foldopen" id="foldopen00016" data-start="{" data-end="}">
 <div class="line"><a id="l00016" name="l00016"></a><span class="lineno"><a class="line" href="class_api_worker.html#a02e221dcc10d69071adb69749e3e5ae6">   16</a></span><a class="code hl_function" href="class_api_worker.html#a02e221dcc10d69071adb69749e3e5ae6">ApiWorker::ApiWorker</a>(QObject *parent) : QObject(parent)</div>
 <div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span>{</div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;ApiWorker constructor - thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="comment">//qDebug() &lt;&lt; &quot;ApiWorker constructor - thread:&quot; &lt;&lt; QThread::currentThreadId();</span></div>
 <div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>}</div>
 </div>
 <div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span></div>
@@ -102,7 +99,7 @@ $(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); 
 <div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordflow">if</span> (<a class="code hl_variable" href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">replyToRequestId</a>.isEmpty()) {</div>
 <div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span>        emit <a class="code hl_signal" href="class_api_worker.html#a2e95d6d6a58ae4265e169cd9b1b3663c">finished</a>();</div>
 <div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span>    }</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;onReplyFinished — thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    <span class="comment">//qDebug() &lt;&lt; &quot;onReplyFinished — thread:&quot; &lt;&lt; QThread::currentThreadId();</span></div>
 <div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>}</div>
 </div>
 <div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span></div>
@@ -110,7 +107,7 @@ $(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); 
 <div class="line"><a id="l00083" name="l00083"></a><span class="lineno"><a class="line" href="class_api_worker.html#a7f0b8aa6e534123b393154cfcfd446c6">   83</a></span><span class="keywordtype">void</span> <a class="code hl_slot" href="class_api_worker.html#a7f0b8aa6e534123b393154cfcfd446c6">ApiWorker::init</a>() {</div>
 <div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span>    <a class="code hl_variable" href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">manager</a> = <span class="keyword">new</span> QNetworkAccessManager(<span class="keyword">this</span>);</div>
 <div class="line"><a id="l00085" name="l00085"></a><span class="lineno">   85</span>    connect(<a class="code hl_variable" href="class_api_worker.html#ad56a07e518aeba6a7f456aa3648332c8">manager</a>, &amp;QNetworkAccessManager::finished, <span class="keyword">this</span>, &amp;<a class="code hl_slot" href="class_api_worker.html#a42abd0b4c00c9a7a9056805faf592a65">ApiWorker::onReplyFinished</a>);</div>
-<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    qDebug() &lt;&lt; <span class="stringliteral">&quot;ApiWorker::init() — thread:&quot;</span> &lt;&lt; QThread::currentThreadId();</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>    <span class="comment">//qDebug() &lt;&lt; &quot;ApiWorker::init() — thread:&quot; &lt;&lt; QThread::currentThreadId();</span></div>
 <div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span>}</div>
 </div>
 <div class="ttc" id="aapiworker_8h_html"><div class="ttname"><a href="apiworker_8h.html">apiworker.h</a></div><div class="ttdoc">Definicja klasy ApiWorker do wykonywania żądań sieciowych w oddzielnym wątku.</div></div>
@@ -125,13 +122,10 @@ $(function(){initNavTree('apiworker_8cpp_source.html',''); initResizable(true); 
 <div class="ttc" id="aclass_api_worker_html_af22b27b476a7d24319ba5befd5b67aa6"><div class="ttname"><a href="class_api_worker.html#af22b27b476a7d24319ba5befd5b67aa6">ApiWorker::~ApiWorker</a></div><div class="ttdeci">~ApiWorker()</div><div class="ttdoc">Destruktor klasy ApiWorker.</div><div class="ttdef"><b>Definicja</b> <a href="#l00026">apiworker.cpp:26</a></div></div>
 <div class="ttc" id="aclass_api_worker_html_af89cf8c1ff4595d6b62f7ad9d26fd4e8"><div class="ttname"><a href="class_api_worker.html#af89cf8c1ff4595d6b62f7ad9d26fd4e8">ApiWorker::replyToRequestId</a></div><div class="ttdeci">QMap&lt; QNetworkReply *, int &gt; replyToRequestId</div><div class="ttdef"><b>Definicja</b> <a href="apiworker_8h_source.html#l00071">apiworker.h:71</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="apiworker_8cpp.html">apiworker.cpp</a></li>
-    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>

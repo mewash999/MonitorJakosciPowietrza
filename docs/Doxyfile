@@ -3,9 +3,9 @@
 Project related configuration options
 #---------------------------------------------------------------------------
 DOXYFILE_ENCODING      = UTF-8
-PROJECT_NAME           = "MJP"
+PROJECT_NAME           = "Monitor Jakości Powietrza"
 PROJECT_NUMBER         = "v1.0"
-PROJECT_BRIEF          = "Monitor Jakości Powietrza"
+PROJECT_BRIEF          = ""
 PROJECT_LOGO           =
 PROJECT_ICON           =
 OUTPUT_DIRECTORY       = docs
@@ -166,7 +166,7 @@ CLANG_DATABASE_PATH    =
 #---------------------------------------------------------------------------
 Configuration options related to the alphabetical class index
 #---------------------------------------------------------------------------
-ALPHABETICAL_INDEX     = YES
+ALPHABETICAL_INDEX     = NO
 IGNORE_PREFIX          =
 #---------------------------------------------------------------------------
 Configuration options related to the HTML output
@@ -217,7 +217,7 @@ QHG_LOCATION           =
 GENERATE_ECLIPSEHELP   = NO
 ECLIPSE_DOC_ID         = org.doxygen.Project
 DISABLE_INDEX          = NO
-GENERATE_TREEVIEW      = YES
+GENERATE_TREEVIEW      = NO
 FULL_SIDEBAR           = NO
 ENUM_VALUES_PER_LINE   = 4
 SHOW_ENUM_VALUES       = NO
@@ -332,14 +332,15 @@ EXTERNAL_PAGES         = YES
 Configuration options related to diagram generator tools
 #---------------------------------------------------------------------------
 HIDE_UNDOC_RELATIONS   = YES
+CLASS_DIAGRAMS         = NO
 HAVE_DOT               = NO
 DOT_NUM_THREADS        = 0
 DOT_COMMON_ATTR        = "fontname=Helvetica,fontsize=10"
 DOT_EDGE_ATTR          = "labelfontname=Helvetica,labelfontsize=10"
 DOT_NODE_ATTR          = "shape=box,height=0.2,width=0.4"
 DOT_FONTPATH           =
-CLASS_GRAPH            = YES
-COLLABORATION_GRAPH    = YES
+CLASS_GRAPH            = NO
+COLLABORATION_GRAPH    = NO
 GROUP_GRAPHS           = YES
 UML_LOOK               = NO
 UML_LIMIT_NUM_FIELDS   = 10
@@ -350,8 +351,8 @@ INCLUDE_GRAPH          = YES
 INCLUDED_BY_GRAPH      = YES
 CALL_GRAPH             = NO
 CALLER_GRAPH           = NO
-GRAPHICAL_HIERARCHY    = YES
-DIRECTORY_GRAPH        = YES
+GRAPHICAL_HIERARCHY    = NO
+DIRECTORY_GRAPH        = NO
 DIR_GRAPH_MAX_DEPTH    = 1
 DOT_IMAGE_FORMAT       = png
 INTERACTIVE_SVG        = NO
