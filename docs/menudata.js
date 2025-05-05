@@ -22,33 +22,8 @@
 
  @licend  The above is the entire license notice for the JavaScript code in this file
 */
-var NAVTREE =
-[
-  [ "Monitor Jakości Powietrza", "index.html", [
-    [ "O programie", "index.html", null ],
-    [ "Struktury Danych", "annotated.html", [
-      [ "Struktury danych", "annotated.html", "annotated_dup" ],
-      [ "Hierarchia klas", "hierarchy.html", "hierarchy" ],
-      [ "Pola danych", "functions.html", [
-        [ "Wszystko", "functions.html", null ],
-        [ "Funkcje", "functions_func.html", null ],
-        [ "Zmienne", "functions_vars.html", null ]
-      ] ]
-    ] ],
-    [ "Pliki", "files.html", [
-      [ "Lista plików", "files.html", "files_dup" ],
-      [ "Globalne", "globals.html", [
-        [ "Wszystko", "globals.html", null ],
-        [ "Funkcje", "globals_func.html", null ]
-      ] ]
-    ] ]
-  ] ]
-];
-
-var NAVTREEINDEX =
-[
-"annotated.html"
-];
-
-var SYNCONMSG = 'kliknij żeby wyłączyć pokazywanie otwartego elementu w drzewie zawartości';
-var SYNCOFFMSG = 'kliknij żeby włączyć pokazywanie otwartego elementu w drzewie zawartości';
+var menudata={children:[
+{text:"README",url:"index.html"},
+{text:"Struktury Danych",url:"annotated.html"},
+{text:"Pola danych",url:"functions.html"},
+{text:"Pliki",url:"files.html"}]}

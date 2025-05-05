@@ -5,16 +5,13 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.13.2"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>MJP: Plik źródłowy datamanager.h</title>
+<title>Monitor Jakości Powietrza: Plik źródłowy datamanager.h</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
 <link href="navtree.css" rel="stylesheet" type="text/css"/>
-<script type="text/javascript" src="navtreedata.js"></script>
-<script type="text/javascript" src="navtree.js"></script>
 <script type="text/javascript" src="resize.js"></script>
-<script type="text/javascript" src="cookie.js"></script>
 <link href="doxygen.css" rel="stylesheet" type="text/css" />
 </head>
 <body>
@@ -24,9 +21,8 @@
  <tbody>
  <tr id="projectrow">
   <td id="projectalign">
-   <div id="projectname">MJP<span id="projectnumber">&#160;v1.0</span>
+   <div id="projectname">Monitor Jakości Powietrza<span id="projectnumber">&#160;v1.0</span>
    </div>
-   <div id="projectbrief">Monitor Jakości Powietrza</div>
   </td>
  </tr>
  </tbody>
@@ -39,22 +35,23 @@
 $(function() { codefold.init(0); });
 /* @license-end */
 </script>
-</div><!-- top -->
-<div id="side-nav" class="ui-resizable side-nav-resizable">
-  <div id="nav-tree">
-    <div id="nav-tree-contents">
-    </div>
-  </div>
-  <div id="splitbar" style="-moz-user-select:none;" 
-       class="ui-resizable-handle">
-  </div>
-</div>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('datamanager_8h_source.html',''); initResizable(true); });
+$(function() {
+  initMenu('',false,false,'search.php','Szukaj',false);
+});
 /* @license-end */
 </script>
+<div id="main-nav"></div>
+</div><!-- top -->
 <div id="doc-content">
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
+$(function(){ initResizable(false); });
+/* @license-end */
+</script>
 <div class="header">
   <div class="headertitle"><div class="title">datamanager.h</div></div>
 </div><!--header-->
@@ -100,13 +97,10 @@ $(function(){initNavTree('datamanager_8h_source.html',''); initResizable(true); 
 <div class="ttc" id="aclass_data_manager_html_ac17e0ca2a1fd6e3ed815949b76f49d49"><div class="ttname"><a href="class_data_manager.html#ac17e0ca2a1fd6e3ed815949b76f49d49">DataManager::getDataFilePath</a></div><div class="ttdeci">static QString getDataFilePath(const QString &amp;baseFileName, int id=-1)</div><div class="ttdoc">Generuje ścieżkę do pliku danych na podstawie nazwy i identyfikatora.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00019">datamanager.cpp:19</a></div></div>
 <div class="ttc" id="aclass_data_manager_html_aedf9b41b7ed88a159ce5190e62662b90"><div class="ttname"><a href="class_data_manager.html#aedf9b41b7ed88a159ce5190e62662b90">DataManager::loadAllHistoricalData</a></div><div class="ttdeci">static QVector&lt; QPair&lt; QDateTime, QByteArray &gt; &gt; loadAllHistoricalData(const QString &amp;type, int id)</div><div class="ttdoc">Wczytuje wszystkie historyczne dane pomiarów dla danego identyfikatora.</div><div class="ttdef"><b>Definicja</b> <a href="datamanager_8cpp_source.html#l00121">datamanager.cpp:121</a></div></div>
 </div><!-- fragment --></div><!-- contents -->
-</div><!-- doc-content -->
 <!-- start footer part -->
-<div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
-  <ul>
-    <li class="navelem"><a class="el" href="datamanager_8h.html">datamanager.h</a></li>
-    <li class="footer">Wygenerowano za pomocą <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2 </li>
-  </ul>
-</div>
+<hr class="footer"/><address class="footer"><small>
+Wygenerowano za pomocą&#160;<a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.13.2
+</small></address>
+</div><!-- doc-content -->
 </body>
 </html>
